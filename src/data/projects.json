@@ -332,7 +332,7 @@
     "description": "A sports typing hybrid where landing three-pointers requires rapid and accurate keypad entry of 6 and 7-digit strings against a shot clock.",
     "gameUrl": "https://jac0b1111.github.io/basketball/",
     "homageUrl": "https://bi.robi3.com/jacob-2/",
-    "badge": "11年級作品 Y11 Work",
+    "badge": "11年級推薦作品 Y11 Recommended",
     "tech": [
       "Typing Event Listeners",
       "Shot Clock Timer",
@@ -340,7 +340,7 @@
       "Keypad Duel"
     ],
     "vibePrompt": "Design an intense arcade basketball shooting game where swishing shots depends on rapidly and accurately typing randomized 6 and 7-digit codes.",
-    "recommended": false
+    "recommended": true
   },
   {
     "id": "y11-jeffrey",
