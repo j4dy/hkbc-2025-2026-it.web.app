@@ -284,17 +284,21 @@ body {
   border-color: var(--hkbc-purple);
   box-shadow: 0 3px 10px rgba(98, 6, 115, 0.25);
 }
-.cat-btn[data-category="recommended"] {
+.cat-btn[data-category="recommended"],
+.filter-btn[data-filter="recommended"] {
   border-color: #fde047;
   background: #fefce8;
   color: #854d0e;
+  font-weight: 600;
 }
-.cat-btn[data-category="recommended"]:hover {
+.cat-btn[data-category="recommended"]:hover,
+.filter-btn[data-filter="recommended"]:hover {
   background: #fef9c3;
   border-color: #facc15;
   color: #713f12;
 }
-.cat-btn[data-category="recommended"].active {
+.cat-btn[data-category="recommended"].active,
+.filter-btn[data-filter="recommended"].active {
   background: linear-gradient(135deg, #a16207 0%, #ca8a04 100%);
   border-color: #a16207;
   color: #ffffff;

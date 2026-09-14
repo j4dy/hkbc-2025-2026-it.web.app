@@ -795,14 +795,17 @@ function updateCounts() {
   const y12Count = allProjects.filter(p => p.year === 'Year 12').length;
   const y11Count = allProjects.filter(p => p.year === 'Year 11').length;
   const y10Count = allProjects.filter(p => p.year === 'Year 10').length;
+  const recCount = allProjects.filter(p => isProjectRecommended(p)).length;
   
   const elAll = document.getElementById('count-all');
+  const elRec = document.getElementById('count-rec');
   const elY12 = document.getElementById('count-y12');
   const elY11 = document.getElementById('count-y11');
   const elY10 = document.getElementById('count-y10');
   const elTotal = document.getElementById('stat-total');
   
   if (elAll) elAll.textContent = allProjects.length;
+  if (elRec) elRec.textContent = recCount;
   if (elY12) elY12.textContent = y12Count;
   if (elY11) elY11.textContent = y11Count;
   if (elY10) elY10.textContent = y10Count;
@@ -818,7 +821,9 @@ function isProjectRecommended(p) {
 function updateCategoryCounts() {
   const cohortPool = activeCohort === 'all' 
     ? allProjects 
-    : allProjects.filter(p => p.year === activeCohort);
+    : (activeCohort === 'recommended' 
+        ? allProjects.filter(p => isProjectRecommended(p))
+        : allProjects.filter(p => p.year === activeCohort));
 
   const elCatAll = document.getElementById('count-cat-all');
   const elCatRec = document.getElementById('count-cat-rec');
@@ -840,9 +845,10 @@ function renderProjects() {
   const isHomageFilter = (activeCategory === 'Personal Homepage' || activeCategory === 'Personal Homage' || activeCategory === 'homepage' || activeCategory === 'website');
   const isGameFilter = (activeCategory === 'Games' || activeCategory === 'games');
   const isRecFilter = (activeCategory === 'recommended' || activeCategory === 'Recommended');
+  const isCohortRec = (activeCohort === 'recommended');
 
   const filtered = allProjects.filter(p => {
-    const matchesCohort = (activeCohort === 'all' || p.year === activeCohort);
+    const matchesCohort = (activeCohort === 'all' || (isCohortRec ? isProjectRecommended(p) : p.year === activeCohort));
     
     let matchesCategory = true;
     if (isRecFilter) {
