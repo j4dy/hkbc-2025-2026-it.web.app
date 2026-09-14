@@ -549,5 +549,214 @@
       "Creative Coding"
     ],
     "vibePrompt": "Design a modern digital portfolio for Year 11 computing class showcasing student work and web technology."
+  },
+  {
+    "id": "y10-billy",
+    "year": "Year 10",
+    "student": "Billy",
+    "title": "S1mon's Personal Web Studio",
+    "category": "Personal Homage",
+    "tagline": "Year 10 ICT student personal web studio and creative computing portfolio.",
+    "description": "Interactive personal web page designed by Billy in Year 10 ICT, showcasing student interests, web design fundamentals, and creative multimedia layouts.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/s1mon/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Web Architecture",
+      "HTML & CSS",
+      "Responsive Design",
+      "Creative Computing"
+    ],
+    "vibePrompt": "Design an interactive personal web studio showcasing computing projects, learning milestones, and student interests."
+  },
+  {
+    "id": "y10-bird",
+    "year": "Year 10",
+    "student": "Bird",
+    "title": "Bird's Digital Space",
+    "category": "Personal Homage",
+    "tagline": "Year 10 creative personal homepage exploring digital expression and typography.",
+    "description": "Playful and imaginative digital space crafted by Bird for the Year 10 ICT curriculum, showcasing custom layout styling and multimedia integration.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/weqweqwewqweqewqeqweqweqweqweqw-edfsdfq%e5%8d%83%e4%b8%87%e5%af%8c%e7%bf%81%e5%be%88%e5%a4%9a%e5%8f%91%e9%a1%ba%e4%b8%b0%e5%a6%82%e6%9e%9c%e4%bb%96%e5%8f%916b-d-jjkasdujhfuguytfgsuohtguihtgawenuotaui/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Web Publishing",
+      "Visual Layouts",
+      "Multimedia Design",
+      "Modern CSS"
+    ],
+    "vibePrompt": "Build an expressive and visually rich digital hub reflecting student creativity and web exploration."
+  },
+  {
+    "id": "y10-coco",
+    "year": "Year 10",
+    "student": "Coco",
+    "title": "My Hobby · Coco's World",
+    "category": "Personal Homage",
+    "tagline": "Year 10 interactive personal blog exploring student passions and leisure hobbies.",
+    "description": "Vibrant student homepage by Coco presenting personal hobbies, creative storytelling, and responsive web aesthetics created during Year 10 computing.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/my-hobby/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Blog Architecture",
+      "CSS Styling",
+      "Image Optimization",
+      "Storytelling"
+    ],
+    "vibePrompt": "Create a heartwarming hobby showcase blog with image galleries, personal stories, and clean typography."
+  },
+  {
+    "id": "y10-frank",
+    "year": "Year 10",
+    "student": "Frank",
+    "title": "Frank's Website",
+    "category": "Personal Homage",
+    "tagline": "Year 10 student web portal exploring computing principles and modern web styling.",
+    "description": "Clean personal homepage created by Frank showcasing introductory web development topics, layout composition, and interactive elements.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/frank-website/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Frontend Design",
+      "Responsive Layout",
+      "HTML5",
+      "Modern CSS"
+    ],
+    "vibePrompt": "Develop a sleek and structured personal website highlighting computing class experiences and student profile."
+  },
+  {
+    "id": "y10-janice",
+    "year": "Year 10",
+    "student": "Janice",
+    "title": "Janice's Creative Showcase",
+    "category": "Personal Homage",
+    "tagline": "Year 10 computing project highlighting creative digital storytelling and design.",
+    "description": "Expressive digital homepage created by Janice featuring personalized aesthetic touches, modular design blocks, and student project highlights.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/janice/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Visual Storytelling",
+      "CSS Grid",
+      "Typography",
+      "Interactive Design"
+    ],
+    "vibePrompt": "Craft a creative student homepage with personalized aesthetic typography, project sections, and visual stories."
+  },
+  {
+    "id": "y10-jennifer",
+    "year": "Year 10",
+    "student": "Jennifer",
+    "title": "Jennifer's Digital Hub",
+    "category": "Personal Homage",
+    "tagline": "Year 10 personal homepage demonstrating responsive web structure and visual identity.",
+    "description": "Structured student homepage designed by Jennifer, featuring multimedia galleries, clean component styling, and personalized self-introduction.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/jennifer/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Web Composition",
+      "Responsive Containers",
+      "Design Systems",
+      "HTML5"
+    ],
+    "vibePrompt": "Build a modern and responsive personal homepage with organized card components, multimedia, and student profile."
+  },
+  {
+    "id": "y10-judy",
+    "year": "Year 10",
+    "student": "Judy",
+    "title": "Judy's Student Web Space",
+    "category": "Personal Homage",
+    "tagline": "Year 10 student personal portfolio exploring computing creativity and web aesthetics.",
+    "description": "Personal web space designed by Year 10 student Judy, exploring creative web layout fundamentals, typography, and personalized digital content.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/judy/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Creative Computing",
+      "CSS Formatting",
+      "Personal Portfolio",
+      "Responsive Web"
+    ],
+    "vibePrompt": "Design a personalized student website showcasing web development exploration and digital creativity."
+  },
+  {
+    "id": "y10-kathy",
+    "year": "Year 10",
+    "student": "Kathy",
+    "title": "Kathy's Digital Corner",
+    "category": "Personal Homage",
+    "tagline": "Year 10 student personal portal celebrating digital creativity and self-expression.",
+    "description": "Enthusiastic and colorful web showcase created by Kathy for Year 10 ICT, incorporating interactive sections and creative digital design.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/kathy/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Visual Web Design",
+      "Typography",
+      "CSS Components",
+      "Creative Arts"
+    ],
+    "vibePrompt": "Construct a cheerful and vibrant web showcase highlighting creative writing, school projects, and interactive layouts."
+  },
+  {
+    "id": "y10-kaylin",
+    "year": "Year 10",
+    "student": "Kaylin",
+    "title": "Kaylin's Creative Wonderland",
+    "category": "Personal Homage",
+    "tagline": "Year 10 student multimedia hub featuring video embeds, figurines, and animation.",
+    "description": "Delightful student homepage created by Kaylin featuring video clips, favorite anime/cartoons (Gravity Falls), figurines, CodeMonkey coding reflections, and multilingual greetings.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/kaylin/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Video Embeds",
+      "Multilingual UI",
+      "Media Galleries",
+      "CSS Animations"
+    ],
+    "vibePrompt": "Build an engaging multimedia website with video streaming, cute figurine showcases, CodeMonkey reflections, and multilingual greetings."
+  },
+  {
+    "id": "y10-nikki",
+    "year": "Year 10",
+    "student": "Nikki",
+    "title": "Nikki's Personal Space",
+    "category": "Personal Homage",
+    "tagline": "Year 10 ICT personal web project exploring clean typography and responsive layout.",
+    "description": "Modern personal profile designed by Nikki for the HKBC Year 10 computing curriculum, showcasing structured web sections and personal interests.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/nikki/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Structured Layout",
+      "Responsive CSS",
+      "Typography",
+      "Web Fundamentals"
+    ],
+    "vibePrompt": "Create a clean and elegant personal website with responsive layouts, typography hierarchy, and student interests."
+  },
+  {
+    "id": "y10-yang",
+    "year": "Year 10",
+    "student": "Yang",
+    "title": "Yang's Tech & Creative Portal",
+    "category": "Personal Homage",
+    "tagline": "Year 10 ICT student digital space and practical web showcase.",
+    "description": "Dynamic personal web portal created by Yang, highlighting computing curiosities, clean frontend layout techniques, and digital storytelling.",
+    "gameUrl": null,
+    "homageUrl": "https://bi.robi3.com/657/",
+    "badge": "中三級作品 Y10 Work",
+    "tech": [
+      "Web Engineering",
+      "Modern CSS",
+      "HTML5 Layouts",
+      "Interactive Design"
+    ],
+    "vibePrompt": "Design an informative student computing portal exploring modern web technologies and interactive digital storytelling."
   }
 ]

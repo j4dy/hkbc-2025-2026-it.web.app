@@ -370,6 +370,11 @@ body {
   color: #27671e;
   border: 1px solid #b8d8af;
 }
+.badge-y10 {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
 .badge-game {
   background: #ffedd5;
   color: #c2410c;
