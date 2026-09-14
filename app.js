@@ -922,7 +922,6 @@ function createCardHTML(p, isHomageFilter = false, isGameFilter = false) {
   }
 
   const cardTitle = (!p.gameUrl || isHomageFilter) ? `${p.student} 個人主頁 (${p.student}'s Website)` : p.title;
-  const techPills = p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('');
 
   return `
     <article class="project-card" role="listitem">
@@ -943,8 +942,15 @@ function createCardHTML(p, isHomageFilter = false, isGameFilter = false) {
 
         <h3 class="card-title">${cardTitle}</h3>
 
-        <div class="tech-pills">
-          ${techPills}
+        <!-- Loaded Game / Website Screenshot Preview -->
+        <div class="card-screenshot-wrapper">
+          <img 
+            src="./screenshots/${p.id}.png" 
+            alt="${p.student} - ${cardTitle}" 
+            class="card-screenshot"
+            loading="lazy"
+            onerror="this.onerror=null; this.parentElement.classList.add('no-screenshot');"
+          />
         </div>
       </div>
 

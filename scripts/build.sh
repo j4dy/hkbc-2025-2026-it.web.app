@@ -24,6 +24,12 @@ if [ -d "public/projects" ]; then
   cp -r public/projects/* dist/projects/
 fi
 
+# Copy screenshots
+if [ -d "public/screenshots" ]; then
+  mkdir -p dist/screenshots
+  cp -r public/screenshots/* dist/screenshots/
+fi
+
 # Copy data
 cp src/data/projects.json dist/src/data/projects.json
 
