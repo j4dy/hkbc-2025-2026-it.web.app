@@ -37,7 +37,7 @@ const EMBEDDED_PROJECTS = [
     "title": "Incremental Defense",
     "category": "Games",
     "description": "An incremental wave defense game where players balance currency minting, projectile throw damage, and wall health repairs against escalating waves of monsters. Built with dynamic automation loops, tier upgrades, and persistent battle states.",
-    "gameUrl": "/games/isaac-defense.html",
+    "gameUrl": "./games/isaac-defense.html",
     "homageUrl": "https://duackyl.github.io/qwerty/",
     "badge": "12年級推薦作品 Y12 Recommended",
     "tech": [
@@ -72,19 +72,19 @@ const EMBEDDED_PROJECTS = [
     "id": "y12-hinson",
     "year": "Year 12",
     "student": "Hinson",
-    "title": "Game Terminal",
+    "title": "Arcade Plinko - FRENZY",
     "category": "Games",
-    "description": "A high-velocity cyber terminal styled with neon glowing borders and interactive system diagnostic feeds. Acts as Hinson's command center launching game experiences.",
-    "gameUrl": "https://hinson1017.github.io/MyHomePage/GameTerminal.html",
+    "description": "A high-energy neon arcade Plinko game featuring dynamic peg physics, multiplayer turns, mid-stage sliding bonus boxes, and chip dropping score mechanics.",
+    "gameUrl": "https://hinson1017.github.io/MyHomePage/Plinko.html",
     "homageUrl": "https://hinson1017.github.io/MyHomePage/",
     "badge": "12年級推薦作品 Y12 Recommended",
     "tech": [
-      "Terminal Emulation",
+      "Neon Arcade Physics",
+      "Plinko Peg Engine",
       "CSS Glow Effects",
-      "Retro Aesthetics",
-      "JavaScript"
+      "Turn-Based Scoring"
     ],
-    "vibePrompt": "Build a futuristic command terminal web interface with glowing neon borders, interactive console commands, and game launching portals.",
+    "vibePrompt": "Design a high-energy neon arcade Plinko game with glowing peg bounces, mid-stage moving bonus multipliers, and turn-based player scoring.",
     "recommended": true
   },
   {
@@ -844,9 +844,11 @@ function renderProjects() {
     }
 
     const query = searchQuery.toLowerCase().trim();
+    const isIsaacMatch = (query === 'issac' || query === 'isaac') && p.student.toLowerCase().includes('isaac');
     const matchesSearch = !query || 
       p.student.toLowerCase().includes(query) ||
-      p.title.toLowerCase().includes(query);
+      p.title.toLowerCase().includes(query) ||
+      isIsaacMatch;
 
     return matchesCohort && matchesCategory && matchesSearch;
   });
