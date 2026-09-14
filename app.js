@@ -72,19 +72,19 @@ const EMBEDDED_PROJECTS = [
     "id": "y12-hinson",
     "year": "Year 12",
     "student": "Hinson",
-    "title": "Arcade Plinko - FRENZY",
+    "title": "Game Terminal",
     "category": "Games",
-    "description": "A high-energy neon arcade Plinko game featuring dynamic peg physics, multiplayer turns, mid-stage sliding bonus boxes, and chip dropping score mechanics.",
-    "gameUrl": "https://hinson1017.github.io/MyHomePage/Plinko.html",
+    "description": "A high-velocity cyber terminal styled with neon glowing borders and interactive system diagnostic feeds. Acts as Hinson's command center launching game experiences.",
+    "gameUrl": "https://hinson1017.github.io/MyHomePage/GameTerminal.html",
     "homageUrl": "https://hinson1017.github.io/MyHomePage/",
     "badge": "12年級推薦作品 Y12 Recommended",
     "tech": [
-      "Neon Arcade Physics",
-      "Plinko Peg Engine",
+      "Terminal Emulation",
       "CSS Glow Effects",
-      "Turn-Based Scoring"
+      "Retro Aesthetics",
+      "JavaScript"
     ],
-    "vibePrompt": "Design a high-energy neon arcade Plinko game with glowing peg bounces, mid-stage moving bonus multipliers, and turn-based player scoring.",
+    "vibePrompt": "Build a futuristic command terminal web interface with glowing neon borders, interactive console commands, and game launching portals.",
     "recommended": true
   },
   {
