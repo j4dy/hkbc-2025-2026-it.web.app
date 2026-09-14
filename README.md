@@ -1,6 +1,6 @@
 # HKBC Vibe Coding Showcase (Year 11 & Year 12)
 
-Official showcase portfolio of Year 11 and Year 12 student projects and web games created via "vibe coding" at **Hong Kong Bluebell College (香港紫荊書院)**.
+Official showcase portfolio of work done by **ICT students in Year 11 and Year 12** during **academic year 2025–2026 (Apr–Jun 2026)**, led by **Miss Judy** ([judy@j4dy.net](mailto:judy@j4dy.net)) at **Hong Kong Bluebell College (香港紫荊書院)**.
 
 🌐 **Live Website:** [https://hkbc-2025-2026-it.web.app](https://hkbc-2025-2026-it.web.app)  
 🏫 **School Website:** [https://www.hkbc.edu.hk/en/](https://www.hkbc.edu.hk/en/)
