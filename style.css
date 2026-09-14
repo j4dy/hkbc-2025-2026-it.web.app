@@ -284,6 +284,22 @@ body {
   border-color: var(--hkbc-purple);
   box-shadow: 0 3px 10px rgba(98, 6, 115, 0.25);
 }
+.cat-btn[data-category="recommended"] {
+  border-color: #fde047;
+  background: #fefce8;
+  color: #854d0e;
+}
+.cat-btn[data-category="recommended"]:hover {
+  background: #fef9c3;
+  border-color: #facc15;
+  color: #713f12;
+}
+.cat-btn[data-category="recommended"].active {
+  background: linear-gradient(135deg, #a16207 0%, #ca8a04 100%);
+  border-color: #a16207;
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(202, 138, 4, 0.35);
+}
 .search-box {
   display: flex;
   align-items: center;

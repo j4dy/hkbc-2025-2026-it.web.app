@@ -811,20 +811,27 @@ function updateCounts() {
   updateCategoryCounts();
 }
 
+function isProjectRecommended(p) {
+  return Boolean(p.recommended) || (p.badge && (p.badge.includes('推薦') || p.badge.includes('Recommended')));
+}
+
 function updateCategoryCounts() {
   const cohortPool = activeCohort === 'all' 
     ? allProjects 
     : allProjects.filter(p => p.year === activeCohort);
 
   const elCatAll = document.getElementById('count-cat-all');
+  const elCatRec = document.getElementById('count-cat-rec');
   const elCatGames = document.getElementById('count-cat-games');
   const elCatHomage = document.getElementById('count-cat-homage');
 
   const totalInCohort = cohortPool.length;
+  const recInCohort = cohortPool.filter(p => isProjectRecommended(p)).length;
   const gamesInCohort = cohortPool.filter(p => Boolean(p.gameUrl)).length;
   const homageInCohort = cohortPool.filter(p => Boolean(p.homageUrl)).length;
 
   if (elCatAll) elCatAll.textContent = totalInCohort;
+  if (elCatRec) elCatRec.textContent = recInCohort;
   if (elCatGames) elCatGames.textContent = gamesInCohort;
   if (elCatHomage) elCatHomage.textContent = homageInCohort;
 }
@@ -832,12 +839,15 @@ function updateCategoryCounts() {
 function renderProjects() {
   const isHomageFilter = (activeCategory === 'Personal Homepage' || activeCategory === 'Personal Homage' || activeCategory === 'homepage' || activeCategory === 'website');
   const isGameFilter = (activeCategory === 'Games' || activeCategory === 'games');
+  const isRecFilter = (activeCategory === 'recommended' || activeCategory === 'Recommended');
 
   const filtered = allProjects.filter(p => {
     const matchesCohort = (activeCohort === 'all' || p.year === activeCohort);
     
     let matchesCategory = true;
-    if (isGameFilter) {
+    if (isRecFilter) {
+      matchesCategory = isProjectRecommended(p);
+    } else if (isGameFilter) {
       matchesCategory = Boolean(p.gameUrl);
     } else if (isHomageFilter) {
       matchesCategory = Boolean(p.homageUrl);
@@ -851,6 +861,15 @@ function renderProjects() {
       isIsaacMatch;
 
     return matchesCohort && matchesCategory && matchesSearch;
+  });
+
+  // By default recommended should be shown on top of list
+  filtered.sort((a, b) => {
+    const aRec = isProjectRecommended(a);
+    const bRec = isProjectRecommended(b);
+    if (aRec && !bRec) return -1;
+    if (!aRec && bRec) return 1;
+    return 0; // maintain natural cohort and student order
   });
 
   if (filtered.length === 0) {
@@ -894,7 +913,7 @@ function createCardHTML(p, isHomageFilter = false, isGameFilter = false) {
   }
 
   let starBadgeHtml = '';
-  const isRecommended = Boolean(p.recommended) || (p.badge && (p.badge.includes('推薦') || p.badge.includes('Recommended')));
+  const isRecommended = isProjectRecommended(p);
   if (isRecommended) {
     starBadgeHtml = `<span class="badge badge-recommended">⭐ 推薦作品 Recommended</span>`;
   }
