@@ -1012,11 +1012,11 @@ function createCardHTML(p, isHomageFilter = false, isGameFilter = false) {
         <!-- Loaded Game / Website Screenshot Preview -->
         <div class="card-screenshot-wrapper">
           <img 
-            src="./screenshots/${p.id}.png" 
+            src="./screenshots/${(isHomageFilter && p.gameUrl) ? `${p.id}-website.png` : `${p.id}.png`}" 
             alt="${p.student} - ${cardTitle}" 
             class="card-screenshot"
             loading="lazy"
-            onerror="this.onerror=null; this.parentElement.classList.add('no-screenshot');"
+            onerror="if (this.src.includes('-website.png')) { this.src = './screenshots/${p.id}.png'; } else { this.onerror=null; this.parentElement.classList.add('no-screenshot'); }"
           />
         </div>
       </div>
