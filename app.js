@@ -39,14 +39,15 @@ const EMBEDDED_PROJECTS = [
     "description": "An incremental wave defense game where players balance currency minting, projectile throw damage, and wall health repairs against escalating waves of monsters. Built with dynamic automation loops, tier upgrades, and persistent battle states.",
     "gameUrl": "/games/isaac-defense.html",
     "homageUrl": "https://duackyl.github.io/qwerty/",
-    "badge": "12年級作品 Y12 Work",
+    "badge": "12年級推薦作品 Y12 Recommended",
     "tech": [
       "HTML5 Canvas",
       "Automation Loops",
       "Incremental Economy",
       "CSS Architecture"
     ],
-    "vibePrompt": "Create an incremental tower defense simulation where I can mint credits, purchase automated throwers and auto-repairers, upgrade my wall health, and fend off scaling monster waves with real-time health bars."
+    "vibePrompt": "Create an incremental tower defense simulation where I can mint credits, purchase automated throwers and auto-repairers, upgrade my wall health, and fend off scaling monster waves with real-time health bars.",
+    "recommended": true
   },
   {
     "id": "y12-jackie",
@@ -57,14 +58,15 @@ const EMBEDDED_PROJECTS = [
     "description": "A Roblox-styled baseball sports simulator featuring realistic ball trajectory physics, pitch variety, batting timing feedback, and custom stadium HUD designed for high-energy arcade gameplay.",
     "gameUrl": "https://jackiu17.github.io/jackieee/jackie_useful/game.html",
     "homageUrl": "https://jackiu17.github.io/jackieee/jackie_useful/jackie.html",
-    "badge": "12年級作品 Y12 Work",
+    "badge": "12年級推薦作品 Y12 Recommended",
     "tech": [
       "Sports Physics",
       "Roblox UI Design",
       "Audio Engine",
       "Web Animations"
     ],
-    "vibePrompt": "Design a 3D Roblox-style baseball arcade game GUI with realistic batting mechanics, pitching modes, scoreboards, and stadium crowd sound effects."
+    "vibePrompt": "Design a 3D Roblox-style baseball arcade game GUI with realistic batting mechanics, pitching modes, scoreboards, and stadium crowd sound effects.",
+    "recommended": true
   },
   {
     "id": "y12-hinson",
@@ -75,14 +77,15 @@ const EMBEDDED_PROJECTS = [
     "description": "A high-velocity cyber terminal styled with neon glowing borders and interactive system diagnostic feeds. Acts as Hinson's command center launching game experiences.",
     "gameUrl": "https://hinson1017.github.io/MyHomePage/GameTerminal.html",
     "homageUrl": "https://hinson1017.github.io/MyHomePage/",
-    "badge": "12年級作品 Y12 Work",
+    "badge": "12年級推薦作品 Y12 Recommended",
     "tech": [
       "Terminal Emulation",
       "CSS Glow Effects",
       "Retro Aesthetics",
       "JavaScript"
     ],
-    "vibePrompt": "Build a futuristic command terminal web interface with glowing neon borders, interactive console commands, and game launching portals."
+    "vibePrompt": "Build a futuristic command terminal web interface with glowing neon borders, interactive console commands, and game launching portals.",
+    "recommended": true
   },
   {
     "id": "y12-angus",
@@ -93,14 +96,15 @@ const EMBEDDED_PROJECTS = [
     "description": "A top-down shooter built on HTML5 Canvas featuring vibrant neon particle trails, fluid 360-degree aiming, enemy AI tracking, and adrenaline-pumping survival waves.",
     "gameUrl": "https://mkysugna.github.io/angus_personal_home_page/game.html",
     "homageUrl": "https://mkysugna.github.io/angus_personal_home_page/",
-    "badge": "12年級作品 Y12 Work",
+    "badge": "12年級推薦作品 Y12 Recommended",
     "tech": [
       "HTML5 Canvas",
       "Vector Math",
       "Particle Physics",
       "Keyboard & Mouse Controls"
     ],
-    "vibePrompt": "Create a retro-neon top-down shooter with twin-stick aiming, neon particle explosions when enemies are hit, and wave survival scoring."
+    "vibePrompt": "Create a retro-neon top-down shooter with twin-stick aiming, neon particle explosions when enemies are hit, and wave survival scoring.",
+    "recommended": true
   },
   {
     "id": "y12-bobo",
@@ -111,14 +115,15 @@ const EMBEDDED_PROJECTS = [
     "description": "An interactive 8-bit retro web game crafted with Tailwind CSS and classic arcade fonts. Players explore rooms, search for hidden items, and avoid seekers within an immersive pixel-art interface.",
     "gameUrl": "https://bobo2111.github.io/Bobo/hideandseekgame.html",
     "homageUrl": "https://bobo2111.github.io/Bobo/",
-    "badge": "12年級作品 Y12 Work",
+    "badge": "12年級推薦作品 Y12 Recommended",
     "tech": [
       "Tailwind CSS",
       "Retro 8-Bit Typography",
       "Grid Logic",
       "Game Audio"
     ],
-    "vibePrompt": "Build an adorable 8-bit retro hide-and-seek web game with cute pixel animations, interactive discovery clues, and Tailwind UI."
+    "vibePrompt": "Build an adorable 8-bit retro hide-and-seek web game with cute pixel animations, interactive discovery clues, and Tailwind UI.",
+    "recommended": true
   },
   {
     "id": "y12-rene",
@@ -129,14 +134,15 @@ const EMBEDDED_PROJECTS = [
     "description": "A 3D First-Person Shooter experience running entirely in browser canvas without heavy game engines. Features pointer lock controls, target tracking, weapon animations, and responsive movement.",
     "gameUrl": "https://rene0510.github.io/rene_new_personal_page/webapp.html",
     "homageUrl": "https://rene0510.github.io/rene_new_personal_page/",
-    "badge": "12年級作品 Y12 Work",
+    "badge": "12年級推薦作品 Y12 Recommended",
     "tech": [
       "3D Canvas Rendering",
       "Raycasting",
       "Pointer Lock API",
       "First-Person Physics"
     ],
-    "vibePrompt": "Generate a lightweight browser 3D first-person shooter canvas game with target shooting, pointer lock mouse look, and HUD health/ammo counters."
+    "vibePrompt": "Generate a lightweight browser 3D first-person shooter canvas game with target shooting, pointer lock mouse look, and HUD health/ammo counters.",
+    "recommended": true
   },
   {
     "id": "y11-sedgwick",
@@ -147,14 +153,15 @@ const EMBEDDED_PROJECTS = [
     "description": "A 3D first-person perspective adaptation of the arcade classic Pac-Man. Navigate winding corridors, collect power pellets, and evade dynamic ghost AI in a raycasted 3D canvas environment.",
     "gameUrl": "https://sedgwickhung0728-dot.github.io/Pac-Man/",
     "homageUrl": "https://bi.robi3.com/sedgwick-hung/",
-    "badge": "11年級作品 Y11 Work",
+    "badge": "11年級推薦作品 Y11 Recommended",
     "tech": [
       "3D Canvas",
       "Raycasting",
       "Ghost AI Pathfinding",
       "Audio FX"
     ],
-    "vibePrompt": "Reimagine the classic arcade Pac-Man as a first-person 3D canvas maze game with neon corridors, raycasting perspective, and intelligent chasing ghost AI."
+    "vibePrompt": "Reimagine the classic arcade Pac-Man as a first-person 3D canvas maze game with neon corridors, raycasting perspective, and intelligent chasing ghost AI.",
+    "recommended": true
   },
   {
     "id": "y11-daniel-lam",
@@ -165,14 +172,15 @@ const EMBEDDED_PROJECTS = [
     "description": "A responsive 3D driving arcade game featuring oncoming vehicle hazards, road perspective scaling, score multipliers, and dynamic road curvature.",
     "gameUrl": "https://danielkiukiu322-art.github.io/test-game/",
     "homageUrl": "https://bi.robi3.com/daniel-l/",
-    "badge": "11年級作品 Y11 Work",
+    "badge": "11年級推薦作品 Y11 Recommended",
     "tech": [
       "3D Canvas",
       "Collision Physics",
       "Speed Curves",
       "Dynamic Hazards"
     ],
-    "vibePrompt": "Create a 3D endless highway driving runner where the player steers a speedster dodging traffic, collects fuel points, and tests reaction speed."
+    "vibePrompt": "Create a 3D endless highway driving runner where the player steers a speedster dodging traffic, collects fuel points, and tests reaction speed.",
+    "recommended": true
   },
   {
     "id": "y11-charlie-critter",
@@ -183,7 +191,7 @@ const EMBEDDED_PROJECTS = [
     "description": "★ 精選作品 ★ 趣味十足的色彩配對街機遊戲！移動捕蟲器並點擊切換顏色（粉紅 🌸、藍色 ⭐、黃色 🌟），精準捕捉相應色彩的毛毛怪以累積連擊倍數，體驗生動特效與刺激節奏！An addictive, high-energy arcade matching game featuring color cycling, dynamic speed scaling, combo streaks, and floating score popups.",
     "gameUrl": "https://vvin830.github.io/0616/",
     "homageUrl": "https://bi.robi3.com/charlie-chan/",
-    "badge": "11年級精選作品 Y11 Star Game",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Color Cycling",
       "Combo Multipliers",
@@ -191,7 +199,8 @@ const EMBEDDED_PROJECTS = [
       "Particle Juice",
       "Dynamic Difficulty"
     ],
-    "vibePrompt": "Build a colorful, polished arcade catching game called Chroma Critter Catch where players slide to catch falling critters and tap to cycle catcher colors to match and trigger combo streaks."
+    "vibePrompt": "Build a colorful, polished arcade catching game called Chroma Critter Catch where players slide to catch falling critters and tap to cycle catcher colors to match and trigger combo streaks.",
+    "recommended": false
   },
   {
     "id": "y11-charlie-brickbreaker",
@@ -209,7 +218,8 @@ const EMBEDDED_PROJECTS = [
       "Keyboard Controls",
       "Reflex Timing"
     ],
-    "vibePrompt": "Build a neon cyberpunk brickbreaker and hazard dodging survival game with escalating ball speeds and combo streak scoring."
+    "vibePrompt": "Build a neon cyberpunk brickbreaker and hazard dodging survival game with escalating ball speeds and combo streak scoring.",
+    "recommended": false
   },
   {
     "id": "y11-vanessa",
@@ -227,7 +237,8 @@ const EMBEDDED_PROJECTS = [
       "Emoji Sprite Animations",
       "High Score State"
     ],
-    "vibePrompt": "Design an endless jumping runner featuring playful emoji animations, dynamic obstacle generation, and responsive double-jump physics."
+    "vibePrompt": "Design an endless jumping runner featuring playful emoji animations, dynamic obstacle generation, and responsive double-jump physics.",
+    "recommended": false
   },
   {
     "id": "y11-jabbok",
@@ -238,14 +249,15 @@ const EMBEDDED_PROJECTS = [
     "description": "An in-browser 3D voxel sandbox inspired by Minecraft, featuring real-time voxel generation, block building and destruction mechanics, and first-person camera movement.",
     "gameUrl": "https://tp211162-art.github.io/Minecraft/",
     "homageUrl": "https://bi.robi3.com/jabbok/",
-    "badge": "11年級作品 Y11 Work",
+    "badge": "11年級推薦作品 Y11 Recommended",
     "tech": [
       "3D Voxel Engine",
       "Terrain Generation",
       "First-Person Controls",
       "Collision Physics"
     ],
-    "vibePrompt": "Construct an interactive 3D browser voxel world sandbox with block digging, placement, pointer lock camera controls, and terrain rendering."
+    "vibePrompt": "Construct an interactive 3D browser voxel world sandbox with block digging, placement, pointer lock camera controls, and terrain rendering.",
+    "recommended": true
   },
   {
     "id": "y11-elita",
@@ -263,7 +275,8 @@ const EMBEDDED_PROJECTS = [
       "Precision Click Detection",
       "Neon Aesthetic"
     ],
-    "vibePrompt": "Create a neon reflex tapping challenge with dynamic target spawns, danger zones, and precision scoring under time pressure."
+    "vibePrompt": "Create a neon reflex tapping challenge with dynamic target spawns, danger zones, and precision scoring under time pressure.",
+    "recommended": false
   },
   {
     "id": "y11-cherry",
@@ -281,7 +294,8 @@ const EMBEDDED_PROJECTS = [
       "Hitbox Math",
       "Retro Vector Glow"
     ],
-    "vibePrompt": "Build a retro arcade space flight survival game in HTML5 canvas with glowing spaceship controls, scrolling starfields, and falling asteroid storms."
+    "vibePrompt": "Build a retro arcade space flight survival game in HTML5 canvas with glowing spaceship controls, scrolling starfields, and falling asteroid storms.",
+    "recommended": false
   },
   {
     "id": "y11-cara",
@@ -299,7 +313,8 @@ const EMBEDDED_PROJECTS = [
       "Collectible Spawners",
       "Score Tracking"
     ],
-    "vibePrompt": "Design an adorable hungry panda arcade game with collectible bamboo snacks, smooth keyboard movement, and animated forest visuals."
+    "vibePrompt": "Design an adorable hungry panda arcade game with collectible bamboo snacks, smooth keyboard movement, and animated forest visuals.",
+    "recommended": false
   },
   {
     "id": "y11-kevin-huang",
@@ -310,14 +325,15 @@ const EMBEDDED_PROJECTS = [
     "description": "An elaborate dual-character combat RPG experience featuring light magic casting, cooldown skill rotations, particle visual effects, and intense boss battles.",
     "gameUrl": "https://huangjingtao109-design.github.io/Abc/",
     "homageUrl": "https://bi.robi3.com/pictre/",
-    "badge": "11年級作品 Y11 Work",
+    "badge": "11年級推薦作品 Y11 Recommended",
     "tech": [
       "Combat State Machine",
       "Particle FX Engine",
       "Boss AI Logic",
       "Audio FX & HUD"
     ],
-    "vibePrompt": "Build an epic dual-character fantasy arena combat game with holy light magic abilities, cooldown triggers, boss phases, and rich particle effects."
+    "vibePrompt": "Build an epic dual-character fantasy arena combat game with holy light magic abilities, cooldown triggers, boss phases, and rich particle effects.",
+    "recommended": true
   },
   {
     "id": "y11-kevin-wang",
@@ -335,7 +351,8 @@ const EMBEDDED_PROJECTS = [
       "Keyboard Handlers",
       "CSS Clean UI"
     ],
-    "vibePrompt": "Implement a clean, distraction-free classic Tetris web game featuring smooth block drops, line clear detection, and accurate rotation math."
+    "vibePrompt": "Implement a clean, distraction-free classic Tetris web game featuring smooth block drops, line clear detection, and accurate rotation math.",
+    "recommended": false
   },
   {
     "id": "y11-jacob",
@@ -353,7 +370,8 @@ const EMBEDDED_PROJECTS = [
       "Basketball Physics Animation",
       "Keypad Duel"
     ],
-    "vibePrompt": "Design an intense arcade basketball shooting game where swishing shots depends on rapidly and accurately typing randomized 6 and 7-digit codes."
+    "vibePrompt": "Design an intense arcade basketball shooting game where swishing shots depends on rapidly and accurately typing randomized 6 and 7-digit codes.",
+    "recommended": false
   },
   {
     "id": "y11-jeffrey",
@@ -371,7 +389,8 @@ const EMBEDDED_PROJECTS = [
       "Interactive Actions",
       "Dynamic Sprites"
     ],
-    "vibePrompt": "Build a Tamagotchi-style virtual puppy companion web app with hunger and happiness status bars, feeding, fetching, and cute dog reactions."
+    "vibePrompt": "Build a Tamagotchi-style virtual puppy companion web app with hunger and happiness status bars, feeding, fetching, and cute dog reactions.",
+    "recommended": false
   },
   {
     "id": "y11-hyman",
@@ -382,14 +401,15 @@ const EMBEDDED_PROJECTS = [
     "description": "以擊劍西洋劍（Foil）規則為基礎設計的雙人擊劍對決遊戲！模擬有效得分軀幹判定與進攻優先權（Right of Way），考驗步法前進、後退、弓步進攻與格擋技巧。A tactical fencing duel simulator built on foil rules, featuring priority/right-of-way mechanics, torso hitboxes, advance/retreat footwork, and parry lunges.",
     "gameUrl": "https://j4dy.github.io/hyman-game/",
     "homageUrl": "https://bi.robi3.com/hyman-2/",
-    "badge": "11年級作品 Y11 Work",
+    "badge": "11年級推薦作品 Y11 Recommended",
     "tech": [
       "HTML5 Canvas 2D",
       "Fencing Foil Priority Engine",
       "Hitbox Collision",
       "2-Player Keyboard Duel"
     ],
-    "vibePrompt": "Create a 2-player Olympic foil fencing duel game with Right of Way priority rules, advance, retreat, lunge, and parry actions on a regulation strip piste."
+    "vibePrompt": "Create a 2-player Olympic foil fencing duel game with Right of Way priority rules, advance, retreat, lunge, and parry actions on a regulation strip piste.",
+    "recommended": true
   },
   {
     "id": "y11-lateisha",
@@ -407,7 +427,8 @@ const EMBEDDED_PROJECTS = [
       "Responsive Layout",
       "Art Stream"
     ],
-    "vibePrompt": "Design an expressive personal art and design showcase with multimedia portfolios, school projects, and creative writing."
+    "vibePrompt": "Design an expressive personal art and design showcase with multimedia portfolios, school projects, and creative writing.",
+    "recommended": false
   },
   {
     "id": "y11-phoebe",
@@ -425,7 +446,8 @@ const EMBEDDED_PROJECTS = [
       "Digital Media",
       "Typography"
     ],
-    "vibePrompt": "Build a personal web space reflecting artistic identity, literary hobbies, and digital showcase elements."
+    "vibePrompt": "Build a personal web space reflecting artistic identity, literary hobbies, and digital showcase elements.",
+    "recommended": false
   },
   {
     "id": "y11-regan",
@@ -443,7 +465,8 @@ const EMBEDDED_PROJECTS = [
       "Interactive Media",
       "Personal Brand"
     ],
-    "vibePrompt": "Craft a modern personal website with responsive sections, profile introduction, and project showcases."
+    "vibePrompt": "Craft a modern personal website with responsive sections, profile introduction, and project showcases.",
+    "recommended": false
   },
   {
     "id": "y11-eunes",
@@ -461,7 +484,8 @@ const EMBEDDED_PROJECTS = [
       "Visual Composition",
       "Interactive UI"
     ],
-    "vibePrompt": "Create an energetic personal portal dedicated to music, favorite bands, and creative digital identity."
+    "vibePrompt": "Create an energetic personal portal dedicated to music, favorite bands, and creative digital identity.",
+    "recommended": false
   },
   {
     "id": "y11-shelly",
@@ -479,7 +503,8 @@ const EMBEDDED_PROJECTS = [
       "CSS Grid",
       "Interactive Design"
     ],
-    "vibePrompt": "Design a clean and welcoming personal homepage with modern typographic styling and creative digital content."
+    "vibePrompt": "Design a clean and welcoming personal homepage with modern typographic styling and creative digital content.",
+    "recommended": false
   },
   {
     "id": "y11-shereen",
@@ -497,7 +522,8 @@ const EMBEDDED_PROJECTS = [
       "Digital Storytelling",
       "Web Components"
     ],
-    "vibePrompt": "Develop an engaging personal web space highlighting student projects and creative exploration."
+    "vibePrompt": "Develop an engaging personal web space highlighting student projects and creative exploration.",
+    "recommended": false
   },
   {
     "id": "y11-william",
@@ -515,7 +541,8 @@ const EMBEDDED_PROJECTS = [
       "Modern CSS",
       "Content Design"
     ],
-    "vibePrompt": "Build a tech-oriented personal profile demonstrating foundational computing principles and responsive web layouts."
+    "vibePrompt": "Build a tech-oriented personal profile demonstrating foundational computing principles and responsive web layouts.",
+    "recommended": false
   },
   {
     "id": "y11-vio",
@@ -533,7 +560,8 @@ const EMBEDDED_PROJECTS = [
       "Web Storytelling",
       "CSS Styling"
     ],
-    "vibePrompt": "Craft an aesthetic and expressive digital homepage with custom color schemes and multimedia elements."
+    "vibePrompt": "Craft an aesthetic and expressive digital homepage with custom color schemes and multimedia elements.",
+    "recommended": false
   },
   {
     "id": "y10-billy",
@@ -551,7 +579,8 @@ const EMBEDDED_PROJECTS = [
       "Responsive Design",
       "Creative Computing"
     ],
-    "vibePrompt": "Design an interactive personal web studio showcasing computing projects, learning milestones, and student interests."
+    "vibePrompt": "Design an interactive personal web studio showcasing computing projects, learning milestones, and student interests.",
+    "recommended": false
   },
   {
     "id": "y10-bird",
@@ -569,7 +598,8 @@ const EMBEDDED_PROJECTS = [
       "Multimedia Design",
       "Modern CSS"
     ],
-    "vibePrompt": "Build an expressive and visually rich digital hub reflecting student creativity and web exploration."
+    "vibePrompt": "Build an expressive and visually rich digital hub reflecting student creativity and web exploration.",
+    "recommended": false
   },
   {
     "id": "y10-coco",
@@ -587,7 +617,8 @@ const EMBEDDED_PROJECTS = [
       "Image Optimization",
       "Storytelling"
     ],
-    "vibePrompt": "Create a heartwarming hobby showcase blog with image galleries, personal stories, and clean typography."
+    "vibePrompt": "Create a heartwarming hobby showcase blog with image galleries, personal stories, and clean typography.",
+    "recommended": false
   },
   {
     "id": "y10-frank",
@@ -605,7 +636,8 @@ const EMBEDDED_PROJECTS = [
       "HTML5",
       "Modern CSS"
     ],
-    "vibePrompt": "Develop a sleek and structured personal website highlighting computing class experiences and student profile."
+    "vibePrompt": "Develop a sleek and structured personal website highlighting computing class experiences and student profile.",
+    "recommended": false
   },
   {
     "id": "y10-janice",
@@ -623,7 +655,8 @@ const EMBEDDED_PROJECTS = [
       "Typography",
       "Interactive Design"
     ],
-    "vibePrompt": "Craft a creative student homepage with personalized aesthetic typography, project sections, and visual stories."
+    "vibePrompt": "Craft a creative student homepage with personalized aesthetic typography, project sections, and visual stories.",
+    "recommended": false
   },
   {
     "id": "y10-jennifer",
@@ -641,7 +674,8 @@ const EMBEDDED_PROJECTS = [
       "Design Systems",
       "HTML5"
     ],
-    "vibePrompt": "Build a modern and responsive personal homepage with organized card components, multimedia, and student profile."
+    "vibePrompt": "Build a modern and responsive personal homepage with organized card components, multimedia, and student profile.",
+    "recommended": false
   },
   {
     "id": "y10-judy",
@@ -659,7 +693,8 @@ const EMBEDDED_PROJECTS = [
       "Personal Portfolio",
       "Responsive Web"
     ],
-    "vibePrompt": "Design a personalized student website showcasing web development exploration and digital creativity."
+    "vibePrompt": "Design a personalized student website showcasing web development exploration and digital creativity.",
+    "recommended": false
   },
   {
     "id": "y10-kathy",
@@ -677,7 +712,8 @@ const EMBEDDED_PROJECTS = [
       "CSS Components",
       "Creative Arts"
     ],
-    "vibePrompt": "Construct a cheerful and vibrant web showcase highlighting creative writing, school projects, and interactive layouts."
+    "vibePrompt": "Construct a cheerful and vibrant web showcase highlighting creative writing, school projects, and interactive layouts.",
+    "recommended": false
   },
   {
     "id": "y10-kaylin",
@@ -695,7 +731,8 @@ const EMBEDDED_PROJECTS = [
       "Media Galleries",
       "CSS Animations"
     ],
-    "vibePrompt": "Build an engaging multimedia website with video streaming, cute figurine showcases, CodeMonkey reflections, and multilingual greetings."
+    "vibePrompt": "Build an engaging multimedia website with video streaming, cute figurine showcases, CodeMonkey reflections, and multilingual greetings.",
+    "recommended": false
   },
   {
     "id": "y10-nikki",
@@ -713,7 +750,8 @@ const EMBEDDED_PROJECTS = [
       "Typography",
       "Web Fundamentals"
     ],
-    "vibePrompt": "Create a clean and elegant personal website with responsive layouts, typography hierarchy, and student interests."
+    "vibePrompt": "Create a clean and elegant personal website with responsive layouts, typography hierarchy, and student interests.",
+    "recommended": false
   },
   {
     "id": "y10-yang",
@@ -731,7 +769,8 @@ const EMBEDDED_PROJECTS = [
       "HTML5 Layouts",
       "Interactive Design"
     ],
-    "vibePrompt": "Design an informative student computing portal exploring modern web technologies and interactive digital storytelling."
+    "vibePrompt": "Design an informative student computing portal exploring modern web technologies and interactive digital storytelling.",
+    "recommended": false
   }
 ];
 
@@ -853,8 +892,9 @@ function createCardHTML(p, isHomageFilter = false, isGameFilter = false) {
   }
 
   let starBadgeHtml = '';
-  if (p.badge && (p.badge.includes('精選') || p.badge.includes('Star'))) {
-    starBadgeHtml = `<span class="badge badge-star">🌟 精選作品 Star Game</span>`;
+  const isRecommended = Boolean(p.recommended) || (p.badge && (p.badge.includes('推薦') || p.badge.includes('Recommended')));
+  if (isRecommended) {
+    starBadgeHtml = `<span class="badge badge-recommended">⭐ 推薦作品 Recommended</span>`;
   }
 
   // Action buttons
@@ -975,6 +1015,20 @@ function openModal(p) {
   } else {
     modalCat.textContent = '🎮 互動遊戲 Games';
     modalCat.className = 'badge badge-game';
+  }
+
+  const modalIsRec = Boolean(p.recommended) || (p.badge && (p.badge.includes('推薦') || p.badge.includes('Recommended')));
+  let modalRecBadge = document.getElementById('modal-rec-badge');
+  if (!modalRecBadge) {
+    modalRecBadge = document.createElement('span');
+    modalRecBadge.id = 'modal-rec-badge';
+    modalRecBadge.className = 'badge badge-recommended';
+    modalRecBadge.textContent = '⭐ 推薦作品 Recommended';
+    const badgesBox = document.querySelector('.modal-badges');
+    if (badgesBox) badgesBox.appendChild(modalRecBadge);
+  }
+  if (modalRecBadge) {
+    modalRecBadge.style.display = modalIsRec ? 'inline-flex' : 'none';
   }
   
   const modalTitleText = (!p.gameUrl || isHomageFilter) ? `${p.student} 個人主頁 (${p.student}'s Website)` : p.title;
