@@ -144,20 +144,39 @@
     "vibePrompt": "Create a 3D endless highway driving runner where the player steers a speedster dodging traffic, collects fuel points, and tests reaction speed."
   },
   {
-    "id": "y11-charlie",
+    "id": "y11-charlie-critter",
     "year": "Year 11",
     "student": "Charlie",
-    "title": "Cyber Dodge Game (Brickbreaker)",
+    "title": "Chroma Critter Catch! 🌸",
     "category": "Games",
-    "description": "Action-packed arcade reflex game where players navigate neon defense bars, deflect projectiles, and rack up high combos under escalating speeds.",
+    "description": "★ 精選作品 ★ 趣味十足的色彩配對街機遊戲！移動捕蟲器並點擊切換顏色（粉紅 🌸、藍色 ⭐、黃色 🌟），精準捕捉相應色彩的毛毛怪以累積連擊倍數，體驗生動特效與刺激節奏！An addictive, high-energy arcade matching game featuring color cycling, dynamic speed scaling, combo streaks, and floating score popups.",
+    "gameUrl": "https://vvin830.github.io/0616/",
+    "homageUrl": "https://bi.robi3.com/charlie-chan/",
+    "badge": "11年級精選作品 Y11 Star Game",
+    "tech": [
+      "Color Cycling",
+      "Combo Multipliers",
+      "Touch & Mouse Controls",
+      "Particle Juice",
+      "Dynamic Difficulty"
+    ],
+    "vibePrompt": "Build a colorful, polished arcade catching game called Chroma Critter Catch where players slide to catch falling critters and tap to cycle catcher colors to match and trigger combo streaks."
+  },
+  {
+    "id": "y11-charlie-brickbreaker",
+    "year": "Year 11",
+    "student": "Charlie",
+    "title": "Cyber Dodge (Brickbreaker)",
+    "category": "Games",
+    "description": "Charlie 創作的霓虹賽博生存挑戰遊戲，考驗玩家快速避開障礙物與彈射反擊的敏捷反應。Cyberpunk hazard dodging and survival arcade challenge testing lightning-fast keyboard and mouse evasion.",
     "gameUrl": "https://vvin830.github.io/Brickbreaker/",
     "homageUrl": "https://bi.robi3.com/charlie-chan/",
     "badge": "11年級作品 Y11 Work",
     "tech": [
       "HTML5 Canvas",
-      "Reflex Mechanics",
-      "Neon Visuals",
-      "Combo Scoring"
+      "Collision Detection",
+      "Keyboard Controls",
+      "Reflex Timing"
     ],
     "vibePrompt": "Build a neon cyberpunk brickbreaker and hazard dodging survival game with escalating ball speeds and combo streak scoring."
   },
