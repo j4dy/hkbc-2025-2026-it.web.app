@@ -258,6 +258,7 @@ body {
 }
 .filter-group, .category-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .filter-btn, .cat-btn {

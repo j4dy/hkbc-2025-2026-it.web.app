@@ -1,3 +1,8 @@
+/**
+ * Hong Kong Bluebell College (HKBC) - Student Vibe Coding Portfolio
+ * Interactive Showcase Application Logic
+ */
+
 let allProjects = [];
 let activeCohort = 'all';
 let activeCategory = 'all';
@@ -16,14 +21,14 @@ const modalYear = document.getElementById('modal-year');
 const modalCat = document.getElementById('modal-cat');
 const modalAvatar = document.getElementById('modal-avatar');
 const modalTitle = document.getElementById('modal-title');
-const modalStudent = document.getElementById('modal-student-name');
+const modalStudent = document.getElementById('modal-student');
 const modalDesc = document.getElementById('modal-desc');
 const modalTech = document.getElementById('modal-tech');
 const modalPrompt = document.getElementById('modal-prompt');
 const modalPrimaryBtn = document.getElementById('modal-primary-btn');
 const modalHubBtn = document.getElementById('modal-hub-btn');
 
-// Load Data
+// Embedded fallback projects dataset
 const EMBEDDED_PROJECTS = [
   {
     "id": "y12-isaac",
@@ -372,7 +377,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Lateisha",
     "title": "Lateisha's Art & Design Portfolio",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 Art & Design stream showcase blending visual aesthetics with ICT programming.",
     "description": "Curated portfolio website by Lateisha Leung exploring digital layout compositions, visual styling, and interactive web elements created in HKBC Year 11.",
     "gameUrl": null,
@@ -391,7 +396,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Phoebe",
     "title": "Phoebe's Creative Web Space",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 Art & Design student interactive showcase exploring books, pets, and visual layouts.",
     "description": "A personal homepage crafted by Phoebe featuring creative storytelling, reflections on literature, artwork showcases, and modern web styling.",
     "gameUrl": null,
@@ -410,7 +415,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Regan",
     "title": "Regan's Digital Hub",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 ICT personal homepage demonstrating responsive web structure and styling.",
     "description": "Interactive digital hub designed by Regan highlighting creative frontend design, modular layout architecture, and personal identity.",
     "gameUrl": null,
@@ -429,7 +434,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Eunes",
     "title": "Eunes's Music & Creative Hub",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 ICT personal web project celebrating music, songs, and creativity.",
     "description": "Vibrant student homepage by Eunes showcasing music passions, favorite musical groups, and expressive web storytelling crafted during Year 11 ICT.",
     "gameUrl": null,
@@ -448,7 +453,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Hyman",
     "title": "Hyman's Fencing & Digital Space",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 personal portfolio highlighting fencing passion, sports goals, and web design.",
     "description": "Personal portfolio by Hyman Poon presenting his dedication to competitive fencing, athletic aspirations, and modern web design techniques.",
     "gameUrl": null,
@@ -467,7 +472,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Shelly",
     "title": "Shelly's Creative Studio",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 computing project featuring interactive multimedia presentation and web typography.",
     "description": "Modern web studio page created by Shelly Lin showcasing digital storytelling, clean typographic layout, and personalized visual flair.",
     "gameUrl": null,
@@ -486,7 +491,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Shereen",
     "title": "Shereen's Web Showcase",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 student digital showcase exploring frontend user interface and design components.",
     "description": "Personal homepage created by Shereen for Year 11 ICT, demonstrating intuitive web navigation, responsive containers, and creative expression.",
     "gameUrl": null,
@@ -505,7 +510,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "William",
     "title": "William's Tech Showcase",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 web computing project exploring personal web architecture and digital identity.",
     "description": "Web computing showcase created by William, presenting technological interests, computing concepts, and personalized digital identity.",
     "gameUrl": null,
@@ -524,7 +529,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Vio",
     "title": "Vio's Digital Showcase",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 interactive personal homepage exploring layout design and digital styling.",
     "description": "Creative web project created by Vio exploring personal expression, color palettes, and structured web layouts in Year 11 ICT.",
     "gameUrl": null,
@@ -543,7 +548,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Bright",
     "title": "Bright's Creative Homepage",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 ICT student digital portal & creative computing project.",
     "description": "Student project created by Bright for the Year 11 ICT curriculum, exploring frontend web layouts and generative AI development.",
     "gameUrl": null,
@@ -562,7 +567,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Daniel Wong",
     "title": "Daniel Wong's Creative Homepage",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 11 ICT student digital space and computing showcase.",
     "description": "Personal digital showcase developed by Daniel Wong within the HKBC Year 11 ICT curriculum, focusing on interactive design and modern web technology.",
     "gameUrl": null,
@@ -581,7 +586,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Billy",
     "title": "S1mon's Personal Web Studio",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 ICT student personal web studio and creative computing portfolio.",
     "description": "Interactive personal web page designed by Billy in Year 10 ICT, showcasing student interests, web design fundamentals, and creative multimedia layouts.",
     "gameUrl": null,
@@ -600,7 +605,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Bird",
     "title": "Bird's Digital Space",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 creative personal homepage exploring digital expression and typography.",
     "description": "Playful and imaginative digital space crafted by Bird for the Year 10 ICT curriculum, showcasing custom layout styling and multimedia integration.",
     "gameUrl": null,
@@ -619,7 +624,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Coco",
     "title": "My Hobby · Coco's World",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 interactive personal blog exploring student passions and leisure hobbies.",
     "description": "Vibrant student homepage by Coco presenting personal hobbies, creative storytelling, and responsive web aesthetics created during Year 10 computing.",
     "gameUrl": null,
@@ -638,7 +643,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Frank",
     "title": "Frank's Website",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 student web portal exploring computing principles and modern web styling.",
     "description": "Clean personal homepage created by Frank showcasing introductory web development topics, layout composition, and interactive elements.",
     "gameUrl": null,
@@ -657,7 +662,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Janice",
     "title": "Janice's Creative Showcase",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 computing project highlighting creative digital storytelling and design.",
     "description": "Expressive digital homepage created by Janice featuring personalized aesthetic touches, modular design blocks, and student project highlights.",
     "gameUrl": null,
@@ -676,7 +681,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Jennifer",
     "title": "Jennifer's Digital Hub",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 personal homepage demonstrating responsive web structure and visual identity.",
     "description": "Structured student homepage designed by Jennifer, featuring multimedia galleries, clean component styling, and personalized self-introduction.",
     "gameUrl": null,
@@ -695,7 +700,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Judy",
     "title": "Judy's Student Web Space",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 student personal portfolio exploring computing creativity and web aesthetics.",
     "description": "Personal web space designed by Year 10 student Judy, exploring creative web layout fundamentals, typography, and personalized digital content.",
     "gameUrl": null,
@@ -714,7 +719,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Kathy",
     "title": "Kathy's Digital Corner",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 student personal portal celebrating digital creativity and self-expression.",
     "description": "Enthusiastic and colorful web showcase created by Kathy for Year 10 ICT, incorporating interactive sections and creative digital design.",
     "gameUrl": null,
@@ -733,7 +738,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Kaylin",
     "title": "Kaylin's Creative Wonderland",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 student multimedia hub featuring video embeds, figurines, and animation.",
     "description": "Delightful student homepage created by Kaylin featuring video clips, favorite anime/cartoons (Gravity Falls), figurines, CodeMonkey coding reflections, and multilingual greetings.",
     "gameUrl": null,
@@ -752,7 +757,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Nikki",
     "title": "Nikki's Personal Space",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 ICT personal web project exploring clean typography and responsive layout.",
     "description": "Modern personal profile designed by Nikki for the HKBC Year 10 computing curriculum, showcasing structured web sections and personal interests.",
     "gameUrl": null,
@@ -771,7 +776,7 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 10",
     "student": "Yang",
     "title": "Yang's Tech & Creative Portal",
-    "category": "Personal Homage",
+    "category": "Personal Homepage",
     "tagline": "Year 10 ICT student digital space and practical web showcase.",
     "description": "Dynamic personal web portal created by Yang, highlighting computing curiosities, clean frontend layout techniques, and digital storytelling.",
     "gameUrl": null,
@@ -820,13 +825,42 @@ function updateCounts() {
   if (elY11) elY11.textContent = y11Count;
   if (elY10) elY10.textContent = y10Count;
   if (elTotal) elTotal.textContent = allProjects.length;
+
+  updateCategoryCounts();
+}
+
+function updateCategoryCounts() {
+  const cohortPool = activeCohort === 'all' 
+    ? allProjects 
+    : allProjects.filter(p => p.year === activeCohort);
+
+  const elCatAll = document.getElementById('count-cat-all');
+  const elCatGames = document.getElementById('count-cat-games');
+  const elCatHomage = document.getElementById('count-cat-homage');
+
+  const totalInCohort = cohortPool.length;
+  const gamesInCohort = cohortPool.filter(p => Boolean(p.gameUrl)).length;
+  const homageInCohort = cohortPool.filter(p => Boolean(p.homageUrl)).length;
+
+  if (elCatAll) elCatAll.textContent = totalInCohort;
+  if (elCatGames) elCatGames.textContent = gamesInCohort;
+  if (elCatHomage) elCatHomage.textContent = homageInCohort;
 }
 
 function renderProjects() {
+  const isHomageFilter = (activeCategory === 'Personal Homepage' || activeCategory === 'Personal Homage' || activeCategory === 'homepage' || activeCategory === 'website');
+  const isGameFilter = (activeCategory === 'Games' || activeCategory === 'games');
+
   const filtered = allProjects.filter(p => {
     const matchesCohort = (activeCohort === 'all' || p.year === activeCohort);
-    const matchesCategory = (activeCategory === 'all' || p.category === activeCategory);
     
+    let matchesCategory = true;
+    if (isGameFilter) {
+      matchesCategory = Boolean(p.gameUrl);
+    } else if (isHomageFilter) {
+      matchesCategory = Boolean(p.homageUrl);
+    }
+
     const query = searchQuery.toLowerCase().trim();
     const matchesSearch = !query || 
       p.student.toLowerCase().includes(query) ||
@@ -842,7 +876,7 @@ function renderProjects() {
   }
 
   noResults.classList.add('hidden');
-  grid.innerHTML = filtered.map(createCardHTML).join('');
+  grid.innerHTML = filtered.map(p => createCardHTML(p, isHomageFilter, isGameFilter)).join('');
 
   // Attach modal trigger listeners
   grid.querySelectorAll('.btn-details').forEach(btn => {
@@ -854,17 +888,48 @@ function renderProjects() {
   });
 }
 
-function createCardHTML(p) {
+function createCardHTML(p, isHomageFilter = false, isGameFilter = false) {
   const yearClass = p.year === 'Year 12' ? 'badge-y12' : (p.year === 'Year 11' ? 'badge-y11' : 'badge-y10');
-  const catClass = p.category === 'Games' ? 'badge-game' : 'badge-homage';
+  const displayYear = p.year === 'Year 12' ? '12年級 Year 12' : (p.year === 'Year 11' ? '11年級 Year 11' : '10年級 Year 10');
   const initial = p.student.charAt(0).toUpperCase();
 
-  const techPills = p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('');
+  // Badges
+  let catBadgesHtml = '';
+  if (isHomageFilter) {
+    catBadgesHtml = `<span class="badge badge-homage">🌐 個人主頁 Website</span>`;
+  } else if (isGameFilter) {
+    catBadgesHtml = `<span class="badge badge-game">🎮 互動遊戲 Game</span>`;
+  } else {
+    if (p.gameUrl && p.homageUrl) {
+      catBadgesHtml = `<span class="badge badge-game">🎮 遊戲</span> <span class="badge badge-homage">🌐 主頁</span>`;
+    } else if (p.gameUrl) {
+      catBadgesHtml = `<span class="badge badge-game">🎮 互動遊戲</span>`;
+    } else {
+      catBadgesHtml = `<span class="badge badge-homage">🌐 個人主頁</span>`;
+    }
+  }
 
   // Action buttons
   let actionButtonsHtml = '';
 
-  if (p.gameUrl && p.homageUrl) {
+  if (isHomageFilter && p.homageUrl) {
+    // Under Personal Homepage filter, primary button directly opens their website!
+    actionButtonsHtml = `
+      <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="新分頁瀏覽 ${p.student} 個人主頁">
+        瀏覽個人主頁 Visit Website 🌐 ↗
+      </a>
+      <div class="card-sub-actions">
+        ${p.gameUrl ? `
+          <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="試玩遊戲 ${p.title}">
+            試玩遊戲 Play Game 🎮 ↗
+          </a>
+        ` : ''}
+        <button class="btn btn-secondary btn-details" data-id="${p.id}" aria-label="查看 ${p.student} 詳細資料">
+          詳情 Details ℹ️
+        </button>
+      </div>
+    `;
+  } else if (p.gameUrl && p.homageUrl) {
     actionButtonsHtml = `
       <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="開啟遊戲試玩 ${p.title}">
         試玩遊戲 Play Game 🎮 ↗
@@ -908,15 +973,14 @@ function createCardHTML(p) {
     `;
   }
 
-  const displayYear = p.year === 'Year 12' ? '12年級 Year 12' : (p.year === 'Year 11' ? '11年級 Year 11' : '10年級 Year 10');
-  const displayCat = p.category === 'Games' ? '🎮 互動遊戲 Games' : '🌐 個人主頁 Homage';
+  const techPills = p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('');
 
   return `
     <article class="project-card" role="listitem">
       <div class="card-top">
         <div class="card-badges">
           <span class="badge ${yearClass}">${displayYear}</span>
-          <span class="badge ${catClass}">${displayCat}</span>
+          ${catBadgesHtml}
         </div>
 
         <div class="card-author">
@@ -927,25 +991,38 @@ function createCardHTML(p) {
           </div>
         </div>
 
-        <h3 class="card-title">${p.title}</h3>
+        <h3 class="card-title">${isHomageFilter ? `${p.student} 的個人主頁 (${p.student}'s Website)` : p.title}</h3>
         <p class="card-tagline">${p.tagline}</p>
 
         <!-- Direct Game & Website Links -->
         <div class="card-links-panel">
-          <div class="card-link-row">
-            <span class="link-label">🎮 遊戲 Game:</span>
-            ${p.gameUrl 
-              ? `<a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="link-url" title="新分頁開啟遊戲 ${p.title}">${p.title} ↗</a>` 
-              : `<span class="link-url text-muted">開發中 In Development</span>`
-            }
-          </div>
-          <div class="card-link-row">
-            <span class="link-label">🌐 網站 Website:</span>
-            ${p.homageUrl 
-              ? `<a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="link-url" title="新分頁瀏覽 ${p.student} 個人主頁">${p.student} 個人主頁 ↗</a>` 
-              : `<span class="link-url text-muted">待發佈 Coming Soon</span>`
-            }
-          </div>
+          ${isHomageFilter ? `
+            <div class="card-link-row" style="background: #e0f2fe; padding: 6px 10px; border-radius: 6px; border: 1px solid #bae6fd;">
+              <span class="link-label" style="font-weight: 700; color: #0369a1;">🌐 網站 Website:</span>
+              <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="link-url" style="font-weight: 700; color: #0284c7;" title="新分頁瀏覽 ${p.student} 個人主頁">${p.student} 個人主頁 ↗</a>
+            </div>
+            ${p.gameUrl ? `
+              <div class="card-link-row">
+                <span class="link-label">🎮 遊戲 Game:</span>
+                <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="link-url" title="新分頁開啟遊戲 ${p.title}">${p.title} ↗</a>
+              </div>
+            ` : ''}
+          ` : `
+            <div class="card-link-row">
+              <span class="link-label">🎮 遊戲 Game:</span>
+              ${p.gameUrl 
+                ? `<a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="link-url" title="新分頁開啟遊戲 ${p.title}">${p.title} ↗</a>` 
+                : `<span class="link-url text-muted">開發中 In Development</span>`
+              }
+            </div>
+            <div class="card-link-row">
+              <span class="link-label">🌐 網站 Website:</span>
+              ${p.homageUrl 
+                ? `<a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="link-url" title="新分頁瀏覽 ${p.student} 個人主頁">${p.student} 個人主頁 ↗</a>` 
+                : `<span class="link-url text-muted">待發佈 Coming Soon</span>`
+              }
+            </div>
+          `}
         </div>
 
         <div class="tech-pills">
@@ -961,41 +1038,60 @@ function createCardHTML(p) {
 }
 
 function openModal(p) {
+  const isHomageFilter = (activeCategory === 'Personal Homepage' || activeCategory === 'Personal Homage' || activeCategory === 'homepage' || activeCategory === 'website');
   const displayYear = p.year === 'Year 12' ? '12年級 Year 12' : (p.year === 'Year 11' ? '11年級 Year 11' : '10年級 Year 10');
   const yearClass = p.year === 'Year 12' ? 'badge-y12' : (p.year === 'Year 11' ? 'badge-y11' : 'badge-y10');
 
   modalYear.textContent = displayYear;
   modalYear.className = `badge ${yearClass}`;
   
-  modalCat.textContent = p.category === 'Games' ? '🎮 互動遊戲 Games' : '🌐 個人主頁 Homage';
-  modalCat.className = `badge ${p.category === 'Games' ? 'badge-game' : 'badge-homage'}`;
+  if (isHomageFilter || !p.gameUrl) {
+    modalCat.textContent = '🌐 個人主頁 Website';
+    modalCat.className = 'badge badge-homage';
+  } else {
+    modalCat.textContent = '🎮 互動遊戲 Games';
+    modalCat.className = 'badge badge-game';
+  }
   
   modalAvatar.textContent = p.student.charAt(0).toUpperCase();
-  modalTitle.textContent = p.title;
+  modalTitle.textContent = isHomageFilter ? `${p.student} 的個人主頁 (${p.student}'s Website)` : p.title;
   modalStudent.textContent = `${p.student} (${displayYear})`;
   modalDesc.textContent = p.description;
 
   modalTech.innerHTML = p.tech.map(t => `<span class="tech-pill" style="padding: 6px 12px; font-size: 0.85rem;">${t}</span>`).join('');
   modalPrompt.textContent = p.vibePrompt || '利用生成式 AI 提示工程及現代網頁技術構建。Built using AI-assisted prompt engineering & web development.';
 
-  if (p.gameUrl) {
-    modalPrimaryBtn.textContent = '開啟遊戲試玩 Play Game 🎮 ↗';
-    modalPrimaryBtn.href = p.gameUrl;
-    modalPrimaryBtn.style.display = 'inline-flex';
-  } else if (p.homageUrl) {
+  if (isHomageFilter && p.homageUrl) {
     modalPrimaryBtn.textContent = '瀏覽個人主頁 Visit Website 🌐 ↗';
     modalPrimaryBtn.href = p.homageUrl;
     modalPrimaryBtn.style.display = 'inline-flex';
+    if (p.gameUrl) {
+      modalHubBtn.textContent = '開啟遊戲試玩 Play Game 🎮 ↗';
+      modalHubBtn.href = p.gameUrl;
+      modalHubBtn.style.display = 'inline-flex';
+    } else {
+      modalHubBtn.style.display = 'none';
+    }
   } else {
-    modalPrimaryBtn.style.display = 'none';
-  }
+    if (p.gameUrl) {
+      modalPrimaryBtn.textContent = '開啟遊戲試玩 Play Game 🎮 ↗';
+      modalPrimaryBtn.href = p.gameUrl;
+      modalPrimaryBtn.style.display = 'inline-flex';
+    } else if (p.homageUrl) {
+      modalPrimaryBtn.textContent = '瀏覽個人主頁 Visit Website 🌐 ↗';
+      modalPrimaryBtn.href = p.homageUrl;
+      modalPrimaryBtn.style.display = 'inline-flex';
+    } else {
+      modalPrimaryBtn.style.display = 'none';
+    }
 
-  if (p.gameUrl && p.homageUrl) {
-    modalHubBtn.textContent = '瀏覽個人主頁 Visit Website 🌐 ↗';
-    modalHubBtn.href = p.homageUrl;
-    modalHubBtn.style.display = 'inline-flex';
-  } else {
-    modalHubBtn.style.display = 'none';
+    if (p.gameUrl && p.homageUrl) {
+      modalHubBtn.textContent = '瀏覽個人主頁 Visit Website 🌐 ↗';
+      modalHubBtn.href = p.homageUrl;
+      modalHubBtn.style.display = 'inline-flex';
+    } else {
+      modalHubBtn.style.display = 'none';
+    }
   }
 
   modal.showModal();
@@ -1008,6 +1104,7 @@ function setupEventListeners() {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       activeCohort = btn.getAttribute('data-filter');
+      updateCategoryCounts();
       renderProjects();
     });
   });
@@ -1037,6 +1134,7 @@ function setupEventListeners() {
       searchInput.value = '';
       document.querySelectorAll('.filter-btn').forEach((b, i) => b.classList.toggle('active', i === 0));
       document.querySelectorAll('.cat-btn').forEach((b, i) => b.classList.toggle('active', i === 0));
+      updateCategoryCounts();
       renderProjects();
     });
   }
