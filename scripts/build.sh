@@ -12,6 +12,8 @@ cp index.html dist/index.html
 cp style.css dist/style.css
 cp app.js dist/app.js
 cp favicon.* dist/ 2>/dev/null || true
+cp og-image.png dist/og-image.png 2>/dev/null || true
+cp public/og-image.png dist/og-image.png 2>/dev/null || true
 
 # Copy games
 if [ -d "public/games" ]; then
