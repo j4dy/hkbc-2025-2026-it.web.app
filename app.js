@@ -988,8 +988,11 @@ function openModal(p) {
   if (modalStudent) modalStudent.textContent = `${p.student} (${displayYear})`;
   modalDesc.textContent = p.description;
 
-  modalTech.innerHTML = p.tech.map(t => `<span class="tech-pill" style="padding: 6px 12px; font-size: 0.85rem;">${t}</span>`).join('');
-  modalPrompt.textContent = p.vibePrompt || '利用生成式 AI 提示工程及現代網頁技術構建。Built using AI-assisted prompt engineering & web development.';
+  if (!p.gameUrl || isHomageFilter) {
+    modalPrompt.textContent = p.vibePrompt || '運用傳統 HTML（Traditional HTML）及現代網頁結構親手編寫。Built using traditional HTML and web development.';
+  } else {
+    modalPrompt.textContent = p.vibePrompt || '利用生成式 AI 提示工程及現代網頁技術構建。Built using AI-assisted prompt engineering & web development.';
+  }
 
   if (isHomageFilter && p.homageUrl) {
     modalPrimaryBtn.textContent = '瀏覽個人主頁 Visit Website 🌐 ↗';
