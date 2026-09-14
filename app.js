@@ -21,7 +21,7 @@ const modalYear = document.getElementById('modal-year');
 const modalCat = document.getElementById('modal-cat');
 const modalAvatar = document.getElementById('modal-avatar');
 const modalTitle = document.getElementById('modal-title');
-const modalStudent = document.getElementById('modal-student');
+const modalStudent = document.getElementById('modal-student-name');
 const modalDesc = document.getElementById('modal-desc');
 const modalTech = document.getElementById('modal-tech');
 const modalPrompt = document.getElementById('modal-prompt');
@@ -916,7 +916,7 @@ function createCardHTML(p, isHomageFilter = false, isGameFilter = false) {
     // Under Personal Homepage filter, primary button directly opens their website!
     actionButtonsHtml = `
       <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="新分頁瀏覽 ${p.student} 個人主頁">
-        瀏覽個人主頁 Visit Website 🌐 ↗
+        瀏覽主頁 Visit Website 🌐 ↗
       </a>
       <div class="card-sub-actions">
         ${p.gameUrl ? `
@@ -957,7 +957,7 @@ function createCardHTML(p, isHomageFilter = false, isGameFilter = false) {
   } else if (p.homageUrl) {
     actionButtonsHtml = `
       <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="新分頁瀏覽 ${p.student} 的個人主頁">
-        瀏覽網站 Visit Website 🌐 ↗
+        瀏覽主頁 Visit Website 🌐 ↗
       </a>
       <div class="card-sub-actions">
         <button class="btn btn-secondary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="查看 ${p.title} 詳細資料">
@@ -992,38 +992,6 @@ function createCardHTML(p, isHomageFilter = false, isGameFilter = false) {
         </div>
 
         <h3 class="card-title">${isHomageFilter ? `${p.student} 的個人主頁 (${p.student}'s Website)` : p.title}</h3>
-        <p class="card-tagline">${p.tagline}</p>
-
-        <!-- Direct Game & Website Links -->
-        <div class="card-links-panel">
-          ${isHomageFilter ? `
-            <div class="card-link-row" style="background: #e0f2fe; padding: 6px 10px; border-radius: 6px; border: 1px solid #bae6fd;">
-              <span class="link-label" style="font-weight: 700; color: #0369a1;">🌐 網站 Website:</span>
-              <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="link-url" style="font-weight: 700; color: #0284c7;" title="新分頁瀏覽 ${p.student} 個人主頁">${p.student} 個人主頁 ↗</a>
-            </div>
-            ${p.gameUrl ? `
-              <div class="card-link-row">
-                <span class="link-label">🎮 遊戲 Game:</span>
-                <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="link-url" title="新分頁開啟遊戲 ${p.title}">${p.title} ↗</a>
-              </div>
-            ` : ''}
-          ` : `
-            <div class="card-link-row">
-              <span class="link-label">🎮 遊戲 Game:</span>
-              ${p.gameUrl 
-                ? `<a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="link-url" title="新分頁開啟遊戲 ${p.title}">${p.title} ↗</a>` 
-                : `<span class="link-url text-muted">開發中 In Development</span>`
-              }
-            </div>
-            <div class="card-link-row">
-              <span class="link-label">🌐 網站 Website:</span>
-              ${p.homageUrl 
-                ? `<a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="link-url" title="新分頁瀏覽 ${p.student} 個人主頁">${p.student} 個人主頁 ↗</a>` 
-                : `<span class="link-url text-muted">待發佈 Coming Soon</span>`
-              }
-            </div>
-          `}
-        </div>
 
         <div class="tech-pills">
           ${techPills}
@@ -1055,7 +1023,7 @@ function openModal(p) {
   
   modalAvatar.textContent = p.student.charAt(0).toUpperCase();
   modalTitle.textContent = isHomageFilter ? `${p.student} 的個人主頁 (${p.student}'s Website)` : p.title;
-  modalStudent.textContent = `${p.student} (${displayYear})`;
+  if (modalStudent) modalStudent.textContent = `${p.student} (${displayYear})`;
   modalDesc.textContent = p.description;
 
   modalTech.innerHTML = p.tech.map(t => `<span class="tech-pill" style="padding: 6px 12px; font-size: 0.85rem;">${t}</span>`).join('');
