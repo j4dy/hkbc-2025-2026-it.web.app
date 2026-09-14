@@ -423,7 +423,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .tech-pill {
   font-size: 0.76rem;
@@ -433,6 +433,54 @@ body {
   border-radius: 5px;
   font-family: var(--font-mono);
   border: 1px solid #e2e8f0;
+  font-weight: 500;
+}
+
+/* Student direct game & website link panel */
+.card-links-panel {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.86rem;
+}
+.card-link-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+.link-label {
+  font-weight: 700;
+  color: #334155;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.link-url {
+  color: var(--hkbc-purple);
+  text-decoration: underline;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  transition: color 0.15s ease;
+}
+.link-url:hover {
+  color: #3b0347;
+  text-decoration: underline;
+}
+.link-url.text-muted {
+  color: #94a3b8;
+  text-decoration: none;
+  font-style: italic;
   font-weight: 500;
 }
 
