@@ -25,12 +25,12 @@
         <img src="https://34237278.s21i.faiusr.com/4/ABUIABAEGAAgnOfG0AYoxNamswMwkwI4qgI.png" alt="HKBC Logo" class="brand-logo" width="44" height="44" />
         <div>
           <h1 class="brand-title">Hong Kong Bluebell College <span class="brand-chinese">香港紫荊書院</span></h1>
-          <p class="brand-sub">ICT & Computing Department • Academic Year 2025–2026</p>
+          <p class="brand-sub">資訊及通訊科技部 • ICT & Computing Department • 2025–2026 學年</p>
         </div>
       </div>
       <div class="header-actions">
         <a href="https://www.hkbc.edu.hk/en/" target="_blank" rel="noopener noreferrer" class="school-link">
-          School Website ↗
+          學校官網 School Website ↗
         </a>
       </div>
     </div>
@@ -41,33 +41,32 @@
     <section class="hero-section">
       <div class="hero-tag">
         <span class="pulse-dot"></span>
-        Academic Year 2025–2026 • Apr–Jun 2026 • Led by Miss Judy
+        2025–2026 學年 • 2026年4月至6月 • 由 Miss Judy 導師帶領
       </div>
       <h2 class="hero-title">
-        Student <span class="gradient-text">Vibe Coding</span> Works
+        學生 <span class="gradient-text">Vibe Coding</span> 作品展
       </h2>
       <p class="hero-description">
-        These interactive games, custom web applications, and digital projects were created by 
-        <strong>ICT students in Year 11 and Year 12</strong> during <strong>academic year 2025–2026 (Apr–Jun 2026)</strong>, 
-        led by <strong>Miss Judy</strong> (<a href="mailto:judy@j4dy.net" style="color: var(--hkbc-green); text-decoration: underline;">judy@j4dy.net</a>) 
-        using AI-assisted prompt engineering, creative coding, and modern web technologies.
+        本展示平台匯集了<strong>香港紫荊書院中四及中五級（Year 11 & Year 12）ICT 學生</strong>於 <strong>2025–2026 學年度（2026年4月至6月）</strong>期間，
+        由 <strong>Miss Judy</strong>（<a href="mailto:judy@j4dy.net" style="color: var(--hkbc-purple); font-weight: 600; text-decoration: underline;">judy@j4dy.net</a>）指導下，
+        善用生成式 AI 提示工程（Prompt Engineering）、創意編程及現代網頁技術親手打造的互動遊戲及個人主頁作品。
       </p>
 
       <!-- Stats counter -->
       <div class="stats-bar">
         <div class="stat-item">
           <span class="stat-num" id="stat-total">11</span>
-          <span class="stat-label">Students</span>
+          <span class="stat-label">位同學作品 Students</span>
         </div>
         <div class="stat-separator"></div>
         <div class="stat-item">
           <span class="stat-num">Y11 & Y12</span>
-          <span class="stat-label">Cohorts</span>
+          <span class="stat-label">中四及中五級 Cohorts</span>
         </div>
         <div class="stat-separator"></div>
         <div class="stat-item">
-          <span class="stat-num">Games & Web</span>
-          <span class="stat-label">Showcase Types</span>
+          <span class="stat-num">遊戲 & 主頁</span>
+          <span class="stat-label">作品類別 Showcase Types</span>
         </div>
       </div>
     </section>
@@ -75,20 +74,20 @@
     <!-- Controls: Filter & Search Bar -->
     <section class="controls-section" aria-label="Project filtering">
       <div class="filter-group">
-        <button class="filter-btn active" data-filter="all">All (<span id="count-all">11</span>)</button>
-        <button class="filter-btn" data-filter="Year 12">Year 12 (<span id="count-y12">6</span>)</button>
-        <button class="filter-btn" data-filter="Year 11">Year 11 (<span id="count-y11">5</span>)</button>
+        <button class="filter-btn active" data-filter="all">全部 All (<span id="count-all">11</span>)</button>
+        <button class="filter-btn" data-filter="Year 12">中五級 Year 12 (<span id="count-y12">6</span>)</button>
+        <button class="filter-btn" data-filter="Year 11">中四級 Year 11 (<span id="count-y11">5</span>)</button>
       </div>
 
       <div class="category-group">
-        <button class="cat-btn active" data-category="all">All Tags</button>
-        <button class="cat-btn" data-category="Games">🎮 Games</button>
-        <button class="cat-btn" data-category="Personal Homage">🌐 Personal Homage</button>
+        <button class="cat-btn active" data-category="all">全部作品 All</button>
+        <button class="cat-btn" data-category="Games">🎮 互動遊戲 Games</button>
+        <button class="cat-btn" data-category="Personal Homage">🌐 個人主頁 Personal Homage</button>
       </div>
 
       <div class="search-box">
         <span class="search-icon" aria-hidden="true">🔍</span>
-        <input type="search" id="search-input" placeholder="Search student name (e.g. Isaac, Jackie, Vanessa)..." aria-label="Search by student name" />
+        <input type="search" id="search-input" placeholder="搜尋同學姓名 Search student name (e.g. Isaac, Jackie, Vanessa)..." aria-label="搜尋同學姓名" />
       </div>
     </section>
 
@@ -98,8 +97,8 @@
         <!-- Injected dynamically via app.js -->
       </div>
       <div id="no-results" class="no-results hidden">
-        <p>No projects match your filter criteria.</p>
-        <button class="reset-btn" id="reset-filters-btn">Reset All Filters</button>
+        <p>沒有找到符合條件的作品 No projects match your filter criteria.</p>
+        <button class="reset-btn" id="reset-filters-btn">重設所有篩選 Reset Filters</button>
       </div>
     </section>
   </main>
@@ -112,37 +111,37 @@
           <span class="badge badge-year" id="modal-year">Year 12</span>
           <span class="badge badge-cat" id="modal-cat">Games</span>
         </div>
-        <button class="close-modal-btn" id="modal-close" aria-label="Close details dialog">✕</button>
+        <button class="close-modal-btn" id="modal-close" aria-label="關閉視窗 Close dialog">✕</button>
       </div>
 
       <div class="modal-body">
         <div class="modal-author">
           <div class="avatar-lg" id="modal-avatar">I</div>
           <div>
-            <h3 class="modal-title" id="modal-title">Project Title</h3>
-            <p class="modal-student">Created by <strong id="modal-student-name">Student</strong></p>
+            <h3 class="modal-title" id="modal-title">作品名稱 Project Title</h3>
+            <p class="modal-student">創作者 Author: <strong id="modal-student-name">Student</strong></p>
           </div>
         </div>
 
-        <p class="modal-desc" id="modal-desc">Detailed description goes here...</p>
+        <p class="modal-desc" id="modal-desc">作品詳細介紹 Detailed description...</p>
 
         <div class="modal-section">
-          <h4>🛠️ Technologies & Techniques</h4>
+          <h4>🛠️ 應用技術與方法 Technologies & Skills</h4>
           <div class="tech-tags" id="modal-tech"></div>
         </div>
 
         <div class="modal-section">
-          <h4>💡 Vibe Prompt & Design Journey</h4>
+          <h4>💡 Vibe Prompt 與創作構思 Design Journey & Prompt</h4>
           <div class="prompt-box" id="modal-prompt">Prompt text...</div>
         </div>
       </div>
 
       <div class="modal-footer">
         <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modal-primary-btn">
-          Play Game in New Window ↗
+          開啟遊戲試玩 Play Game ↗
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modal-hub-btn">
-          Visit Personal Homage ↗
+          到訪個人主頁 Visit Homage ↗
         </a>
       </div>
     </div>
@@ -151,11 +150,11 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-container">
-      <p>© Academic Year 2025–2026 Hong Kong Bluebell College (HKBC) • ICT & Computing Department</p>
-      <p class="footer-sub">Curated and led by Miss Judy (<a href="mailto:judy@j4dy.net" style="color: inherit; text-decoration: underline;">judy@j4dy.net</a>) • Apr–Jun 2026</p>
+      <p>© 2025–2026 學年 香港紫荊書院 Hong Kong Bluebell College (HKBC) • 資訊及通訊科技部 ICT & Computing Department</p>
+      <p class="footer-sub">指導老師 Curated and led by Miss Judy (<a href="mailto:judy@j4dy.net" style="color: inherit; text-decoration: underline;">judy@j4dy.net</a>) • 2026年4月–6月</p>
     </div>
   </footer>
 
-  <script src="app.js?v=20260914-1540"></script>
+  <script src="app.js?v=20260914-1542"></script>
 </body>
 </html>

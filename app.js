@@ -258,62 +258,65 @@ function createCardHTML(p) {
 
   if (p.gameUrl && p.homageUrl) {
     actionButtonsHtml = `
-      <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Launch ${p.title} in a new window">
-        Play Game 🎮
+      <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="開啟遊戲試玩 ${p.title}">
+        試玩遊戲 Play Game 🎮
       </a>
       <div class="card-sub-actions">
-        <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Visit ${p.student}'s Personal Homage">
-          Personal Homage 🌐
+        <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="瀏覽 ${p.student} 個人主頁">
+          個人主頁 Homage 🌐
         </a>
-        <button class="btn btn-secondary btn-details" data-id="${p.id}" aria-label="View details for ${p.title}">
-          Details ℹ️
+        <button class="btn btn-secondary btn-details" data-id="${p.id}" aria-label="查看 ${p.title} 詳細資料">
+          詳情 Details ℹ️
         </button>
       </div>
     `;
   } else if (p.gameUrl) {
     actionButtonsHtml = `
-      <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Launch ${p.title} in a new window">
-        Play Game 🎮
+      <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="開啟遊戲試玩 ${p.title}">
+        試玩遊戲 Play Game 🎮
       </a>
       <div class="card-sub-actions">
-        <button class="btn btn-secondary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="View details for ${p.title}">
-          Project Details ℹ️
+        <button class="btn btn-secondary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="查看 ${p.title} 詳細資料">
+          作品詳情 Details ℹ️
         </button>
       </div>
     `;
   } else if (p.homageUrl) {
     actionButtonsHtml = `
-      <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Visit ${p.student}'s Personal Homage">
-        Personal Homage 🌐
+      <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="瀏覽 ${p.student} 個人主頁">
+        個人主頁 Homage 🌐
       </a>
       <div class="card-sub-actions">
-        <button class="btn btn-secondary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="View details for ${p.title}">
-          Project Details ℹ️
+        <button class="btn btn-secondary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="查看 ${p.title} 詳細資料">
+          作品詳情 Details ℹ️
         </button>
       </div>
     `;
   } else {
     // For students without an external link yet (e.g. Y11 in progress)
     actionButtonsHtml = `
-      <button class="btn btn-primary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="View details for ${p.title}">
-        View Project Overview ℹ️
+      <button class="btn btn-primary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="查看 ${p.title} 簡介">
+        作品概覽 Project Overview ℹ️
       </button>
     `;
   }
+
+  const displayYear = p.year === 'Year 12' ? '中五級 Year 12' : '中四級 Year 11';
+  const displayCat = p.category === 'Games' ? '🎮 互動遊戲 Games' : '🌐 個人主頁 Homage';
 
   return `
     <article class="project-card" role="listitem">
       <div class="card-top">
         <div class="card-badges">
-          <span class="badge ${yearClass}">${p.year}</span>
-          <span class="badge ${catClass}">${p.category}</span>
+          <span class="badge ${yearClass}">${displayYear}</span>
+          <span class="badge ${catClass}">${displayCat}</span>
         </div>
 
         <div class="card-author">
           <div class="author-avatar">${initial}</div>
           <div>
             <div class="author-name">${p.student}</div>
-            <div style="font-size: 0.8rem; color: #64748b;">${p.badge || 'Student Work'}</div>
+            <div style="font-size: 0.8rem; color: #64748b;">${p.badge || '同學作品 Student Work'}</div>
           </div>
         </div>
 
@@ -333,22 +336,22 @@ function createCardHTML(p) {
 }
 
 function openModal(p) {
-  modalYear.textContent = p.year;
+  modalYear.textContent = p.year === 'Year 12' ? '中五級 Year 12' : '中四級 Year 11';
   modalYear.className = `badge ${p.year === 'Year 12' ? 'badge-y12' : 'badge-y11'}`;
   
-  modalCat.textContent = p.category;
+  modalCat.textContent = p.category === 'Games' ? '🎮 互動遊戲 Games' : '🌐 個人主頁 Homage';
   modalCat.className = `badge ${p.category === 'Games' ? 'badge-game' : 'badge-homage'}`;
   
   modalAvatar.textContent = p.student.charAt(0).toUpperCase();
   modalTitle.textContent = p.title;
-  modalStudent.textContent = `${p.student} (${p.year})`;
+  modalStudent.textContent = `${p.student} (${p.year === 'Year 12' ? '中五級 Year 12' : '中四級 Year 11'})`;
   modalDesc.textContent = p.description;
 
   modalTech.innerHTML = p.tech.map(t => `<span class="tech-pill" style="padding: 6px 12px; font-size: 0.85rem;">${t}</span>`).join('');
-  modalPrompt.textContent = p.vibePrompt || 'Built using AI-assisted prompt engineering & web development.';
+  modalPrompt.textContent = p.vibePrompt || '利用生成式 AI 提示工程及現代網頁技術構建。Built using AI-assisted prompt engineering & web development.';
 
   if (p.gameUrl) {
-    modalPrimaryBtn.textContent = 'Play Game in New Window 🎮';
+    modalPrimaryBtn.textContent = '開啟遊戲試玩 Play Game 🎮 ↗';
     modalPrimaryBtn.href = p.gameUrl;
     modalPrimaryBtn.style.display = 'inline-flex';
   } else {
@@ -356,7 +359,7 @@ function openModal(p) {
   }
 
   if (p.homageUrl) {
-    modalHubBtn.textContent = 'Visit Personal Homage 🌐';
+    modalHubBtn.textContent = '到訪個人主頁 Visit Homage 🌐 ↗';
     modalHubBtn.href = p.homageUrl;
     modalHubBtn.style.display = 'inline-flex';
   } else {
