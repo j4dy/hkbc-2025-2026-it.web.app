@@ -17,6 +17,12 @@ if [ -d "public/games" ]; then
   cp -r public/games/* dist/games/
 fi
 
+# Copy projects
+if [ -d "public/projects" ]; then
+  mkdir -p dist/projects
+  cp -r public/projects/* dist/projects/
+fi
+
 # Copy data
 cp src/data/projects.json dist/src/data/projects.json
 

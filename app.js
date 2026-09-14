@@ -118,7 +118,7 @@ const EMBEDDED_PROJECTS = [
     "tagline": "Year 11 interactive web and creative AI vibe coding project.",
     "description": "Creative digital project developed as part of the HKBC Year 11 ICT curriculum, showcasing rapid AI prototyping and web technologies.",
     "gameUrl": null,
-    "homageUrl": null,
+    "homageUrl": "/projects/project.html?student=Vanessa&title=Vanessa's%20Creative%20Computing%20Project&year=Year%2011",
     "badge": "Year 11 Project",
     "tech": ["HTML5", "CSS3", "JavaScript", "AI Prompting"],
     "vibePrompt": "Year 11 ICT Vibe Coding showcase project created in Term 3 at Hong Kong Bluebell College."
@@ -132,7 +132,7 @@ const EMBEDDED_PROJECTS = [
     "tagline": "Year 11BI practical computing and interactive web application.",
     "description": "Interactive web application created by Charlie for the Year 11BI computing showcase (June 2026), leveraging vibe coding methodologies.",
     "gameUrl": null,
-    "homageUrl": null,
+    "homageUrl": "/projects/project.html?student=Charlie&title=Charlie's%20Digital%20Studio&year=Year%2011",
     "badge": "Year 11 Project",
     "tech": ["HTML5", "CSS3", "JavaScript", "AI Prototyping"],
     "vibePrompt": "Year 11BI computing project demonstrating rapid UI iteration and AI design."
@@ -146,7 +146,7 @@ const EMBEDDED_PROJECTS = [
     "tagline": "Year 11 creative interactive web experience.",
     "description": "Curated digital showcase exploring frontend web aesthetics, responsive layouts, and user interactivity built during Year 11 ICT.",
     "gameUrl": null,
-    "homageUrl": null,
+    "homageUrl": "/projects/project.html?student=Elita&title=Elita's%20Interactive%20Portal&year=Year%2011",
     "badge": "Year 11 Project",
     "tech": ["HTML5", "CSS Grid", "JavaScript", "AI Tools"],
     "vibePrompt": "Interactive web portal created in HKBC Year 11 computing class."
@@ -160,7 +160,7 @@ const EMBEDDED_PROJECTS = [
     "tagline": "Year 11A interactive UI and vibe-coded creative showcase.",
     "description": "Polished web project combining visual storytelling with modern responsive CSS components from Year 11A.",
     "gameUrl": null,
-    "homageUrl": null,
+    "homageUrl": "/projects/project.html?student=Cara&title=Cara's%20Design%20Showcase&year=Year%2011",
     "badge": "Year 11 Project",
     "tech": ["HTML5", "CSS3", "Visual Design", "AI Coding"],
     "vibePrompt": "Year 11A ICT practical project exploring visual design and modern web layouts."
@@ -174,7 +174,7 @@ const EMBEDDED_PROJECTS = [
     "tagline": "Year 11 practical web development and logic exploration.",
     "description": "Practical application project exploring interactive user logic and dynamic browser interfaces in Year 11 ICT.",
     "gameUrl": null,
-    "homageUrl": null,
+    "homageUrl": "/projects/project.html?student=Jacob&title=Jacob's%20Tech%20Lab&year=Year%2011",
     "badge": "Year 11 Project",
     "tech": ["HTML5", "JavaScript", "Algorithms", "Vibe Coding"],
     "vibePrompt": "Year 11 ICT student project built with generative AI programming workflows."
@@ -259,11 +259,11 @@ function createCardHTML(p) {
   if (p.gameUrl && p.homageUrl) {
     actionButtonsHtml = `
       <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="開啟遊戲試玩 ${p.title}">
-        試玩遊戲 Play Game 🎮
+        試玩遊戲 Play Game 🎮 ↗
       </a>
       <div class="card-sub-actions">
         <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="瀏覽 ${p.student} 個人主頁">
-          個人主頁 Homage 🌐
+          個人主頁 Homage 🌐 ↗
         </a>
         <button class="btn btn-secondary btn-details" data-id="${p.id}" aria-label="查看 ${p.title} 詳細資料">
           詳情 Details ℹ️
@@ -273,7 +273,7 @@ function createCardHTML(p) {
   } else if (p.gameUrl) {
     actionButtonsHtml = `
       <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="開啟遊戲試玩 ${p.title}">
-        試玩遊戲 Play Game 🎮
+        試玩遊戲 Play Game 🎮 ↗
       </a>
       <div class="card-sub-actions">
         <button class="btn btn-secondary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="查看 ${p.title} 詳細資料">
@@ -283,8 +283,8 @@ function createCardHTML(p) {
     `;
   } else if (p.homageUrl) {
     actionButtonsHtml = `
-      <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="瀏覽 ${p.student} 個人主頁">
-        個人主頁 Homage 🌐
+      <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="新分頁開啟 ${p.student} 的作品">
+        開啟作品 Open Project 🌐 ↗
       </a>
       <div class="card-sub-actions">
         <button class="btn btn-secondary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="查看 ${p.title} 詳細資料">
@@ -293,11 +293,10 @@ function createCardHTML(p) {
       </div>
     `;
   } else {
-    // For students without an external link yet (e.g. Y11 in progress)
     actionButtonsHtml = `
-      <button class="btn btn-primary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="查看 ${p.title} 簡介">
-        作品概覽 Project Overview ℹ️
-      </button>
+      <a href="/projects/project.html?student=${encodeURIComponent(p.student)}&title=${encodeURIComponent(p.title)}&year=${encodeURIComponent(p.year)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;" title="新分頁開啟 ${p.title}">
+        開啟作品 Open Project ↗
+      </a>
     `;
   }
 
@@ -354,11 +353,15 @@ function openModal(p) {
     modalPrimaryBtn.textContent = '開啟遊戲試玩 Play Game 🎮 ↗';
     modalPrimaryBtn.href = p.gameUrl;
     modalPrimaryBtn.style.display = 'inline-flex';
+  } else if (p.homageUrl) {
+    modalPrimaryBtn.textContent = '開啟作品 Open Project 🌐 ↗';
+    modalPrimaryBtn.href = p.homageUrl;
+    modalPrimaryBtn.style.display = 'inline-flex';
   } else {
     modalPrimaryBtn.style.display = 'none';
   }
 
-  if (p.homageUrl) {
+  if (p.gameUrl && p.homageUrl) {
     modalHubBtn.textContent = '到訪個人主頁 Visit Homage 🌐 ↗';
     modalHubBtn.href = p.homageUrl;
     modalHubBtn.style.display = 'inline-flex';

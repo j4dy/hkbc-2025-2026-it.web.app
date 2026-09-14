@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>學生作品展示 | 香港紫荊書院 HKBC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --hkbc-purple: #620673;
+      --hkbc-green: #3d7933;
+      --bg-main: #f8fafc;
+      --text-main: #0f172a;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      max-width: 680px;
+      width: 100%;
+      padding: 40px 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+    .badge {
+      display: inline-block;
+      background: #f3e8ff;
+      color: var(--hkbc-purple);
+      border: 1px solid #d8b4fe;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+    .author {
+      font-size: 1.05rem;
+      color: var(--hkbc-purple);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .desc {
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+    .tech-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 28px;
+      text-align: left;
+    }
+    .tech-box h3 {
+      font-size: 0.88rem;
+      color: var(--hkbc-purple);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tech-tag {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: #334155;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--hkbc-purple);
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: #7b0990;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge" id="p-year">中四級 Year 11 • ICT Vibe Coding</div>
+    <h1 id="p-title">學生作品展示 Student Project Showcase</h1>
+    <div class="author" id="p-author">香港紫荊書院 Hong Kong Bluebell College</div>
+    <p class="desc" id="p-desc">
+      此作品為香港紫荊書院中四級（Year 11）同學於 2025–2026 學年度由 Miss Judy 指導之 Vibe Coding 課程創作項目。
+    </p>
+    <div class="tech-box">
+      <h3>🛠️ 應用技術與方法 Skills & Technologies</h3>
+      <div class="tech-tags" id="p-tech">
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">Generative AI Prompting</span>
+      </div>
+    </div>
+    <div class="actions">
+      <a href="https://hkbc-2025-2026-it.web.app" class="btn btn-primary">← 返回作品展主頁 Back to Showcase</a>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const student = params.get('student');
+    const title = params.get('title');
+    const desc = params.get('desc');
+    const year = params.get('year') || 'Year 11';
+
+    if (student) {
+      document.title = `${student} - ${title || '學生作品'} | HKBC`;
+      document.getElementById('p-author').textContent = `創作者 Author: ${student}（${year === 'Year 12' ? '中五級 Year 12' : '中四級 Year 11'}）`;
+    }
+    if (title) document.getElementById('p-title').textContent = title;
+    if (desc) document.getElementById('p-desc').textContent = desc;
+  </script>
+</body>
+</html>
