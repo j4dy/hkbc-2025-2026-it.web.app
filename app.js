@@ -517,42 +517,6 @@ const EMBEDDED_PROJECTS = [
     "vibePrompt": "Craft an aesthetic and expressive digital homepage with custom color schemes and multimedia elements."
   },
   {
-    "id": "y11-bright",
-    "year": "Year 11",
-    "student": "Bright",
-    "title": "Bright 個人主頁 (Bright's Website)",
-    "category": "Personal Homepage",
-    "description": "Student project created by Bright for the Year 11 ICT curriculum, exploring frontend web layouts and generative AI development.",
-    "gameUrl": null,
-    "homageUrl": "https://bi.robi3.com/y11/y11-authors/",
-    "badge": "11年級作品 Y11 Work",
-    "tech": [
-      "Web Fundamentals",
-      "Creative Computing",
-      "AI Prompting",
-      "HTML5"
-    ],
-    "vibePrompt": "Build a personal showcase homepage representing creative computing explorations in Year 11 ICT."
-  },
-  {
-    "id": "y11-daniel-wong",
-    "year": "Year 11",
-    "student": "Daniel Wong",
-    "title": "Daniel Wong 個人主頁 (Daniel Wong's Website)",
-    "category": "Personal Homepage",
-    "description": "Personal digital showcase developed by Daniel Wong within the HKBC Year 11 ICT curriculum, focusing on interactive design and modern web technology.",
-    "gameUrl": null,
-    "homageUrl": "https://bi.robi3.com/y11/y11-authors/",
-    "badge": "11年級作品 Y11 Work",
-    "tech": [
-      "Interactive Design",
-      "HTML5 & CSS3",
-      "Web Tools",
-      "Creative Coding"
-    ],
-    "vibePrompt": "Design a modern digital portfolio for Year 11 computing class showcasing student work and web technology."
-  },
-  {
     "id": "y10-billy",
     "year": "Year 10",
     "student": "Billy",
@@ -988,6 +952,7 @@ function openModal(p) {
   if (modalStudent) modalStudent.textContent = `${p.student} (${displayYear})`;
   modalDesc.textContent = p.description;
 
+  modalTech.innerHTML = p.tech.map(t => `<span class="tech-pill" style="padding: 6px 12px; font-size: 0.85rem;">${t}</span>`).join('');
   if (!p.gameUrl || isHomageFilter) {
     modalPrompt.textContent = p.vibePrompt || '運用傳統 HTML（Traditional HTML）及現代網頁結構親手編寫。Built using traditional HTML and web development.';
   } else {
