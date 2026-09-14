@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260914-1534" />
+  <link rel="stylesheet" href="style.css?v=20260914-1540" />
 </head>
 <body>
 
@@ -57,17 +57,17 @@
       <div class="stats-bar">
         <div class="stat-item">
           <span class="stat-num" id="stat-total">11</span>
-          <span class="stat-label">Student Projects</span>
+          <span class="stat-label">Students</span>
         </div>
         <div class="stat-separator"></div>
         <div class="stat-item">
           <span class="stat-num">Y11 & Y12</span>
-          <span class="stat-label">Cohorts Featured</span>
+          <span class="stat-label">Cohorts</span>
         </div>
         <div class="stat-separator"></div>
         <div class="stat-item">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Interactive Demos</span>
+          <span class="stat-num">Games & Web</span>
+          <span class="stat-label">Showcase Types</span>
         </div>
       </div>
     </section>
@@ -75,20 +75,20 @@
     <!-- Controls: Filter & Search Bar -->
     <section class="controls-section" aria-label="Project filtering">
       <div class="filter-group">
-        <button class="filter-btn active" data-filter="all">All Cohorts (<span id="count-all">11</span>)</button>
+        <button class="filter-btn active" data-filter="all">All (<span id="count-all">11</span>)</button>
         <button class="filter-btn" data-filter="Year 12">Year 12 (<span id="count-y12">6</span>)</button>
         <button class="filter-btn" data-filter="Year 11">Year 11 (<span id="count-y11">5</span>)</button>
       </div>
 
       <div class="category-group">
-        <button class="cat-btn active" data-category="all">All Types</button>
-        <button class="cat-btn" data-category="Games">🎮 Vibe Games</button>
-        <button class="cat-btn" data-category="Web Apps">🌐 Web Apps</button>
+        <button class="cat-btn active" data-category="all">All Tags</button>
+        <button class="cat-btn" data-category="Games">🎮 Games</button>
+        <button class="cat-btn" data-category="Personal Homage">🌐 Personal Homage</button>
       </div>
 
       <div class="search-box">
         <span class="search-icon" aria-hidden="true">🔍</span>
-        <input type="search" id="search-input" placeholder="Search by student, game, or tech..." aria-label="Search projects" />
+        <input type="search" id="search-input" placeholder="Search student name (e.g. Isaac, Jackie, Vanessa)..." aria-label="Search by student name" />
       </div>
     </section>
 
@@ -142,7 +142,7 @@
           Play Game in New Window ↗
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modal-hub-btn">
-          Visit Student Hub ↗
+          Visit Personal Homage ↗
         </a>
       </div>
     </div>
@@ -156,6 +156,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260914-1532"></script>
+  <script src="app.js?v=20260914-1540"></script>
 </body>
 </html>

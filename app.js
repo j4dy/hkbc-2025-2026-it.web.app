@@ -31,13 +31,12 @@ const EMBEDDED_PROJECTS = [
     "student": "Isaac",
     "title": "Incremental Defense",
     "category": "Games",
-    "tagline": "Realtime wave defense with automated financial minting & structural fortress fortification.",
-    "description": "An addictive incremental defense game where players balance currency minting, projectile throw damage, and wall health repairs against escalating waves of monsters. Built with dynamic automation loops, tier upgrades, and persistent battle states.",
-    "demoUrl": "/games/isaac-defense.html",
-    "hubUrl": "https://duackyl.github.io/qwerty/",
-    "githubUrl": "https://github.com/duackyl/qwerty",
+    "tagline": "Realtime wave defense with automated currency minting & fortress fortification.",
+    "description": "An incremental wave defense game where players balance currency minting, projectile throw damage, and wall health repairs against escalating waves of monsters. Built with dynamic automation loops, tier upgrades, and persistent battle states.",
+    "gameUrl": "/games/isaac-defense.html",
+    "homageUrl": "https://duackyl.github.io/qwerty/",
     "badge": "Vibe Coded Game",
-    "tech": ["HTML5 Canvas", "Automation Loops", "Incremental Economy", "CSS Glassmorphism"],
+    "tech": ["HTML5 Canvas", "Automation Loops", "Incremental Economy", "CSS Architecture"],
     "vibePrompt": "Create an incremental tower defense simulation where I can mint credits, purchase automated throwers and auto-repairers, upgrade my wall health, and fend off scaling monster waves with real-time health bars."
   },
   {
@@ -48,12 +47,25 @@ const EMBEDDED_PROJECTS = [
     "category": "Games",
     "tagline": "Roblox-inspired baseball pitching, batting, and field stadium simulator.",
     "description": "A Roblox-styled baseball sports simulator featuring realistic ball trajectory physics, pitch variety, batting timing feedback, and custom stadium HUD designed for high-energy arcade gameplay.",
-    "demoUrl": "https://jackiu17.github.io/jackieee/jackie_useful/game.html",
-    "hubUrl": "https://jackiu17.github.io/jackieee/jackie_useful/jackie.html",
-    "githubUrl": "https://github.com/jackiu17/jackieee",
+    "gameUrl": "https://jackiu17.github.io/jackieee/jackie_useful/game.html",
+    "homageUrl": "https://jackiu17.github.io/jackieee/jackie_useful/jackie.html",
     "badge": "Vibe Coded Game",
     "tech": ["Sports Physics", "Roblox UI Design", "Audio Engine", "Web Animations"],
     "vibePrompt": "Design a 3D Roblox-style baseball arcade game GUI with realistic batting mechanics, pitching modes, scoreboards, and stadium crowd sound effects."
+  },
+  {
+    "id": "y12-hinson-terminal",
+    "year": "Year 12",
+    "student": "Hinson",
+    "title": "Game Terminal",
+    "category": "Games",
+    "tagline": "Cyberpunk command-line retro terminal launcher for interactive web games.",
+    "description": "A high-velocity cyber terminal styled with neon glowing borders and interactive system diagnostic feeds. Acts as Hinson's command center launching game experiences.",
+    "gameUrl": "https://hinson1017.github.io/MyHomePage/GameTerminal.html",
+    "homageUrl": "https://hinson1017.github.io/MyHomePage/",
+    "badge": "Vibe Coded Game",
+    "tech": ["Terminal Emulation", "CSS Glow Effects", "Retro Aesthetics", "JavaScript"],
+    "vibePrompt": "Build a futuristic command terminal web interface with glowing neon borders, interactive console commands, and game launching portals."
   },
   {
     "id": "y12-angus-shooter",
@@ -62,10 +74,9 @@ const EMBEDDED_PROJECTS = [
     "title": "Neon Twin-Stick Shooter",
     "category": "Games",
     "tagline": "Fast-paced cyberpunk twin-stick canvas action game with dynamic particle systems.",
-    "description": "A high-octane 2D top-down shooter built on HTML5 Canvas featuring vibrant neon particle trails, fluid 360-degree aiming, enemy AI tracking, and adrenaline-pumping survival waves.",
-    "demoUrl": "https://mkysugna.github.io/angus_personal_home_page/game.html",
-    "hubUrl": "https://mkysugna.github.io/angus_personal_home_page/",
-    "githubUrl": "https://github.com/Mkysugna/angus_personal_home_page",
+    "description": "A top-down shooter built on HTML5 Canvas featuring vibrant neon particle trails, fluid 360-degree aiming, enemy AI tracking, and adrenaline-pumping survival waves.",
+    "gameUrl": "https://mkysugna.github.io/angus_personal_home_page/game.html",
+    "homageUrl": "https://mkysugna.github.io/angus_personal_home_page/",
     "badge": "Vibe Coded Game",
     "tech": ["HTML5 Canvas", "Vector Math", "Particle Physics", "Keyboard & Mouse Controls"],
     "vibePrompt": "Create a retro-neon top-down shooter with twin-stick aiming, neon particle explosions when enemies are hit, and wave survival scoring."
@@ -78,9 +89,8 @@ const EMBEDDED_PROJECTS = [
     "category": "Games",
     "tagline": "Charming 8-bit retro arcade hide-and-seek interactive maze experience.",
     "description": "An interactive 8-bit retro web game crafted with Tailwind CSS and classic arcade fonts. Players explore rooms, search for hidden items, and avoid seekers within an immersive pixel-art interface.",
-    "demoUrl": "https://bobo2111.github.io/Bobo/hideandseekgame.html",
-    "hubUrl": "https://bobo2111.github.io/Bobo/",
-    "githubUrl": "https://github.com/bobo2111/Bobo",
+    "gameUrl": "https://bobo2111.github.io/Bobo/hideandseekgame.html",
+    "homageUrl": "https://bobo2111.github.io/Bobo/",
     "badge": "Vibe Coded Game",
     "tech": ["Tailwind CSS", "Retro 8-Bit Typography", "Grid Logic", "Game Audio"],
     "vibePrompt": "Build an adorable 8-bit retro hide-and-seek web game with cute pixel animations, interactive discovery clues, and Tailwind UI."
@@ -92,40 +102,24 @@ const EMBEDDED_PROJECTS = [
     "title": "FPS-solo 3D Game",
     "category": "Games",
     "tagline": "First-Person Shooter 3D web experience with canvas raycasting & target tracking.",
-    "description": "An ambitious 3D First-Person Shooter experience running entirely in the browser canvas without heavy game engines. Features pointer lock controls, target tracking, weapon animations, and responsive movement.",
-    "demoUrl": "https://rene0510.github.io/rene_new_personal_page/webapp.html",
-    "hubUrl": "https://rene0510.github.io/rene_new_personal_page/",
-    "githubUrl": "https://github.com/rene0510/rene_new_personal_page",
+    "description": "A 3D First-Person Shooter experience running entirely in browser canvas without heavy game engines. Features pointer lock controls, target tracking, weapon animations, and responsive movement.",
+    "gameUrl": "https://rene0510.github.io/rene_new_personal_page/webapp.html",
+    "homageUrl": "https://rene0510.github.io/rene_new_personal_page/",
     "badge": "Vibe Coded Game",
     "tech": ["3D Canvas Rendering", "Raycasting", "Pointer Lock API", "First-Person Physics"],
     "vibePrompt": "Generate a lightweight browser 3D first-person shooter canvas game with target shooting, pointer lock mouse look, and HUD health/ammo counters."
   },
   {
-    "id": "y12-hinson-terminal",
-    "year": "Year 12",
-    "student": "Hinson",
-    "title": "Game Terminal",
-    "category": "Games",
-    "tagline": "Cyberpunk command-line retro terminal launcher for interactive web games.",
-    "description": "A high-velocity cyber terminal styled with neon blue glowing borders and interactive system diagnostic feeds. Acts as Hinson's command center launching game experiences.",
-    "demoUrl": "https://hinson1017.github.io/MyHomePage/GameTerminal.html",
-    "hubUrl": "https://hinson1017.github.io/MyHomePage/",
-    "githubUrl": "https://github.com/Hinson1017/MyHomePage",
-    "badge": "Vibe Coded Game",
-    "tech": ["Terminal Emulation", "CSS Glow Effects", "Google Analytics Tagging", "Retro Aesthetics"],
-    "vibePrompt": "Build a futuristic command terminal web interface with glowing neon borders, interactive console commands, and game launching portals."
-  },
-  {
     "id": "y11-vanessa",
     "year": "Year 11",
     "student": "Vanessa",
-    "title": "Vanessa's Creative Vibe Project",
-    "category": "Web Apps",
-    "tagline": "Year 11 interactive web development and creative computing project.",
-    "description": "Creative digital project developed as part of the HKBC Year 11 ICT Vibe Coding curriculum, showcasing rapid AI prototyping and web technologies.",
-    "demoUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "hubUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "badge": "Year 11 Showcase",
+    "title": "Vanessa's Creative Computing Project",
+    "category": "Personal Homage",
+    "tagline": "Year 11 interactive web and creative AI vibe coding project.",
+    "description": "Creative digital project developed as part of the HKBC Year 11 ICT curriculum, showcasing rapid AI prototyping and web technologies.",
+    "gameUrl": null,
+    "homageUrl": null,
+    "badge": "Year 11 Project",
     "tech": ["HTML5", "CSS3", "JavaScript", "AI Prompting"],
     "vibePrompt": "Year 11 ICT Vibe Coding showcase project created in Term 3 at Hong Kong Bluebell College."
   },
@@ -134,12 +128,12 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Charlie",
     "title": "Charlie's Digital Studio",
-    "category": "Web Apps",
+    "category": "Personal Homage",
     "tagline": "Year 11BI practical computing and interactive web application.",
     "description": "Interactive web application created by Charlie for the Year 11BI computing showcase (June 2026), leveraging vibe coding methodologies.",
-    "demoUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "hubUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "badge": "Year 11 Showcase",
+    "gameUrl": null,
+    "homageUrl": null,
+    "badge": "Year 11 Project",
     "tech": ["HTML5", "CSS3", "JavaScript", "AI Prototyping"],
     "vibePrompt": "Year 11BI computing project demonstrating rapid UI iteration and AI design."
   },
@@ -148,12 +142,12 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Elita",
     "title": "Elita's Interactive Portal",
-    "category": "Web Apps",
+    "category": "Personal Homage",
     "tagline": "Year 11 creative interactive web experience.",
     "description": "Curated digital showcase exploring frontend web aesthetics, responsive layouts, and user interactivity built during Year 11 ICT.",
-    "demoUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "hubUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "badge": "Year 11 Showcase",
+    "gameUrl": null,
+    "homageUrl": null,
+    "badge": "Year 11 Project",
     "tech": ["HTML5", "CSS Grid", "JavaScript", "AI Tools"],
     "vibePrompt": "Interactive web portal created in HKBC Year 11 computing class."
   },
@@ -162,12 +156,12 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Cara",
     "title": "Cara's Design Showcase",
-    "category": "Web Apps",
+    "category": "Personal Homage",
     "tagline": "Year 11A interactive UI and vibe-coded creative showcase.",
     "description": "Polished web project combining visual storytelling with modern responsive CSS components from Year 11A.",
-    "demoUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "hubUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "badge": "Year 11 Showcase",
+    "gameUrl": null,
+    "homageUrl": null,
+    "badge": "Year 11 Project",
     "tech": ["HTML5", "CSS3", "Visual Design", "AI Coding"],
     "vibePrompt": "Year 11A ICT practical project exploring visual design and modern web layouts."
   },
@@ -176,12 +170,12 @@ const EMBEDDED_PROJECTS = [
     "year": "Year 11",
     "student": "Jacob",
     "title": "Jacob's Tech Lab",
-    "category": "Web Apps",
+    "category": "Personal Homage",
     "tagline": "Year 11 practical web development and logic exploration.",
     "description": "Practical application project exploring interactive user logic and dynamic browser interfaces in Year 11 ICT.",
-    "demoUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "hubUrl": "https://miro.com/app/board/uXjVGtEjllA=/",
-    "badge": "Year 11 Showcase",
+    "gameUrl": null,
+    "homageUrl": null,
+    "badge": "Year 11 Project",
     "tech": ["HTML5", "JavaScript", "Algorithms", "Vibe Coding"],
     "vibePrompt": "Year 11 ICT student project built with generative AI programming workflows."
   }
@@ -228,9 +222,7 @@ function renderProjects() {
     const query = searchQuery.toLowerCase().trim();
     const matchesSearch = !query || 
       p.student.toLowerCase().includes(query) ||
-      p.title.toLowerCase().includes(query) ||
-      p.tagline.toLowerCase().includes(query) ||
-      p.tech.some(t => t.toLowerCase().includes(query));
+      p.title.toLowerCase().includes(query);
 
     return matchesCohort && matchesCategory && matchesSearch;
   });
@@ -256,21 +248,58 @@ function renderProjects() {
 
 function createCardHTML(p) {
   const yearClass = p.year === 'Year 12' ? 'badge-y12' : 'badge-y11';
-  const catClass = p.category === 'Games' ? 'badge-game' : 'badge-web';
+  const catClass = p.category === 'Games' ? 'badge-game' : 'badge-homage';
   const initial = p.student.charAt(0).toUpperCase();
-
-  // Primary action label & icon
-  const isGame = p.category === 'Games';
-  const primaryText = isGame ? 'Play Game 🚀' : 'Open Project ↗';
 
   const techPills = p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('');
 
-  // Personal hub button
-  const hubButton = p.hubUrl ? `
-    <a href="${p.hubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="View ${p.student}'s Personal Hub">
-      Personal Hub 🌐
-    </a>
-  ` : '';
+  // Action buttons
+  let actionButtonsHtml = '';
+
+  if (p.gameUrl && p.homageUrl) {
+    actionButtonsHtml = `
+      <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Launch ${p.title} in a new window">
+        Play Game 🎮
+      </a>
+      <div class="card-sub-actions">
+        <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Visit ${p.student}'s Personal Homage">
+          Personal Homage 🌐
+        </a>
+        <button class="btn btn-secondary btn-details" data-id="${p.id}" aria-label="View details for ${p.title}">
+          Details ℹ️
+        </button>
+      </div>
+    `;
+  } else if (p.gameUrl) {
+    actionButtonsHtml = `
+      <a href="${p.gameUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Launch ${p.title} in a new window">
+        Play Game 🎮
+      </a>
+      <div class="card-sub-actions">
+        <button class="btn btn-secondary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="View details for ${p.title}">
+          Project Details ℹ️
+        </button>
+      </div>
+    `;
+  } else if (p.homageUrl) {
+    actionButtonsHtml = `
+      <a href="${p.homageUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Visit ${p.student}'s Personal Homage">
+        Personal Homage 🌐
+      </a>
+      <div class="card-sub-actions">
+        <button class="btn btn-secondary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="View details for ${p.title}">
+          Project Details ℹ️
+        </button>
+      </div>
+    `;
+  } else {
+    // For students without an external link yet (e.g. Y11 in progress)
+    actionButtonsHtml = `
+      <button class="btn btn-primary btn-details" data-id="${p.id}" style="width: 100%;" aria-label="View details for ${p.title}">
+        View Project Overview ℹ️
+      </button>
+    `;
+  }
 
   return `
     <article class="project-card" role="listitem">
@@ -297,16 +326,7 @@ function createCardHTML(p) {
       </div>
 
       <div class="card-actions">
-        <!-- Direct new-window launcher -->
-        <a href="${p.demoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Launch ${p.title} in a new window">
-          ${primaryText}
-        </a>
-        <div class="card-sub-actions">
-          ${hubButton}
-          <button class="btn btn-secondary btn-details" data-id="${p.id}" aria-label="View details for ${p.title}">
-            Details ℹ️
-          </button>
-        </div>
+        ${actionButtonsHtml}
       </div>
     </article>
   `;
@@ -317,7 +337,7 @@ function openModal(p) {
   modalYear.className = `badge ${p.year === 'Year 12' ? 'badge-y12' : 'badge-y11'}`;
   
   modalCat.textContent = p.category;
-  modalCat.className = `badge ${p.category === 'Games' ? 'badge-game' : 'badge-web'}`;
+  modalCat.className = `badge ${p.category === 'Games' ? 'badge-game' : 'badge-homage'}`;
   
   modalAvatar.textContent = p.student.charAt(0).toUpperCase();
   modalTitle.textContent = p.title;
@@ -327,12 +347,17 @@ function openModal(p) {
   modalTech.innerHTML = p.tech.map(t => `<span class="tech-pill" style="padding: 6px 12px; font-size: 0.85rem;">${t}</span>`).join('');
   modalPrompt.textContent = p.vibePrompt || 'Built using AI-assisted prompt engineering & web development.';
 
-  const isGame = p.category === 'Games';
-  modalPrimaryBtn.textContent = isGame ? 'Play Game in New Window 🚀' : 'Open in New Window ↗';
-  modalPrimaryBtn.href = p.demoUrl;
+  if (p.gameUrl) {
+    modalPrimaryBtn.textContent = 'Play Game in New Window 🎮';
+    modalPrimaryBtn.href = p.gameUrl;
+    modalPrimaryBtn.style.display = 'inline-flex';
+  } else {
+    modalPrimaryBtn.style.display = 'none';
+  }
 
-  if (p.hubUrl) {
-    modalHubBtn.href = p.hubUrl;
+  if (p.homageUrl) {
+    modalHubBtn.textContent = 'Visit Personal Homage 🌐';
+    modalHubBtn.href = p.homageUrl;
     modalHubBtn.style.display = 'inline-flex';
   } else {
     modalHubBtn.style.display = 'none';
