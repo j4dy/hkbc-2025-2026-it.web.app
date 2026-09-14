@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incremental Defense - Isaac (Y12)</title>
+    <style>
+
+        /* Alignment wrapper for consistent padding matching the video header */
+        .content-align {
+            padding-left: 7.5%;
+        }
+
+        #www{
+            position: fixed;
+            bottom: 20px; 
+            right: 20px;  
+            z-index: 1000; 
+            margin: 10px;
+            background: red;
+            box-shadow: inset 10px 0;
+            border-radius: 100px;
+        }
+        .circular-button {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            transition: transform 2.5s linear, box-shadow 0.3s ease;
+        }
+
+        .circular-button:hover {
+            transform: translateY(-500px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+        }
+        
+        .agroi{
+            width: 200px;
+            height: 100px;
+            color: rgb(26, 22, 22);
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: 5s;
+        }
+        .agroi:hover{
+            width:100%;
+            transform: rotate(220deg);
+            animation: spin 2s linear infinite;
+        }
+        .pic{
+            transform: translate(190%,90%)
+        }
+        h2{
+            padding-top: 1%;
+            color: brown;
+        }
+        tr td{
+            border: 1px black solid;
+        }
+        :root{
+            --speed-mult:1;
+            --spin-angle: 360deg;
+        }
+        .box-small{
+            width: 200px;
+            height: 100px;
+            background: linear-gradient(35.4rad,#56d20b, #8a7c54);
+            color: white;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: .5s;
+            animation: spin calc(0.1s / var(--speed-mult)) linear infinite;
+        }
+        
+        .box-small:hover{
+            width: 75%;
+        }
+
+        .box-medium{
+            width: 70%;
+            height: 100px;
+            background:radial-gradient(#1abc9c,#c876e0);
+            color: white;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            animation: spin calc(1s / var(--speed-mult)) linear infinite;
+        }
+
+        .box-large{
+            width: 15cm;
+            height: 100px;
+            background: conic-gradient(#55392e,#31b4b4);
+            color: white;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            font-size: 16pt;
+            animation: spin calc(0.5s / var(--speed-mult)) linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(var(--spin-angle)); }
+        }
+
+        /* --- Incremental Game Dashboard Layout --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2000;
+        }
+        
+        .modal-window {
+            position: absolute;
+            top: 5%;
+            left: 15%;
+            width: 850px;
+            height: 740px;
+            background: #111116;
+            border: 3px solid #334155;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+            opacity: 0;
+            transform: scale(0.95);
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            resize: both;
+            overflow: hidden;
+            color: #e2e8f0;
+        }
+        
+        .modal-window.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+        
+        .window-header {
+            background: #1e1e24;
+            padding: 12px;
+            cursor: move;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            border-bottom: 2px solid #334155;
+        }
+        
+        .window-title {
+            color: #f59e0b;
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 1rem;
+            margin: 0;
+        }
+        
+        .close-btn {
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .close-btn:hover {
+            color: #ef4444;
+        }
+        
+        .window-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
+        /* --- Visual Representation Tracking Track --- */
+        .battlefield-track {
+            background: #0f172a;
+            border: 2px dashed #475569;
+            height: 70px;
+            border-radius: 8px;
+            margin: 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .player-fortress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 100%;
+            background: #1e3a8a;
+            border-right: 3px solid #3b82f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+            z-index: 2;
+        }
+        .monster-avatar {
+            position: absolute;
+            right: 0%; 
+            top: 10px;
+            width: 45px;
+            height: 45px;
+            background: #7f1d1d;
+            border: 2px solid #ef4444;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #fca5a5;
+            transition: right 0.1s linear;
+            z-index: 1;
+        }
+
+        .health-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .hp-container {
+            flex: 1;
+            background: #1e1e24;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: left;
+        }
+        .hp-label { font-size: 0.9rem; font-weight: bold; margin-bottom: 4px; display: flex; justify-content: space-between; }
+
+        .game-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .game-panel {
+            background: #1e1e24;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 15px;
+            flex: 1;
+            min-width: 240px;
+            text-align: center;
+            position: relative;
+        }
+        .game-stat { font-size: 1.2rem; margin: 10px 0; font-weight: bold; }
+        .hl-blue { color: #3b82f6; }
+        .hl-red { color: #ef4444; }
+        .hl-green { color: #10b981; }
+        
+        .btn-game {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            border: none;
+            margin-top: 5px;
+        }
+        .btn-game:active { transform: scale(0.98); }
+        .bg-mint { background: #3b82f6; color: white; }
+        .bg-mint:hover { background: #60a5fa; }
+        .bg-attack { background: #ef4444; color: white; }
+        .bg-attack:hover { background: #f87171; }
+        .bg-heal { background: #10b981; color: white; }
+        .bg-heal:hover { background: #34d399; }
+        
+        .btn-g-up { background: #475569; color: #f8fafc; border: 1px solid #64748b; margin-top: 8px; }
+        .btn-g-up:hover { background: #64748b; }
+        .btn-g-up:disabled { background: #1e293b; color: #475569; cursor: not-allowed; border-color: #334155; }
+        
+        .g-progress-bg {
+            background: #0f172a;
+            border-radius: 4px;
+            height: 10px;
+            width: 100%;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        .g-progress-bar { height: 100%; width: 0%; }
+        #g-mint-bar { background: #3b82f6; }
+        #g-attack-bar { background: #ef4444; }
+        #g-heal-bar { background: #10b981; }
+        .hp-bar-fill { height: 100%; width: 100%; transition: width 0.1s ease; }
+
+        .utility-row {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .btn-mini-pause {
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 4px;
+            border: 1px solid #475569;
+            background: #334155;
+            color: #f8fafc;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: all 0.1s;
+        }
+        .btn-mini-pause:hover { background: #475569; }
+        .btn-mini-pause.paused-state {
+            background: #b91c1c;
+            border-color: #ef4444;
+            color: white;
+        }
+    
+    </style>
+
+<style>
+body {
+    background: #14041a;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.game-wrapper {
+    width: 100%;
+    max-width: 900px;
+    background: #200727;
+    border: 1px solid rgba(207, 147, 217, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(98, 6, 115, 0.3);
+    overflow: hidden;
+}
+.window-header {
+    background: #34083f;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(207, 147, 217, 0.25);
+}
+.window-title {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #b8d8af;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.window-content {
+    padding: 24px;
+}
+.back-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(207, 147, 217, 0.15);
+}
+.back-link {
+    color: #d4c0dc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+.back-link:hover {
+    color: #b8d8af;
+}
+.author-badge {
+    background: rgba(184, 216, 175, 0.18);
+    color: #b8d8af;
+    border: 1px solid rgba(184, 216, 175, 0.4);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+/* Ensure modal-window styles work inline without absolute position */
+#gameModalWindow {
+    display: block !important;
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
+}
+.close-btn {
+    display: none !important;
+}
+</style>
+
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="window-header">
+            <div class="window-title">🛡️ Incremental Defense</div>
+            <div class="author-badge">By Isaac (Year 12 - HKBC)</div>
+        </div>
+        <div class="window-content">
+            <div class="back-bar">
+                <a href="https://duackyl.github.io/qwerty/" class="back-link" target="_blank" rel="noopener">← Visit Isaac's Personal Hub</a>
+                <span style="font-size: 0.85rem; color: #64748b;">AI Vibe-Coded Web Game</span>
+            </div>
+            
+<div class="window-header" id="gameWinHeader">
+<div class="window-title">Incremental defense</div>
+<button class="close-btn" id="closeGameBtn">×</button>
+</div>
+<div class="window-content">
+<div class="game-stat" style="margin-top: 0; display:flex; justify-content: space-between;">
+<span>Wave Target: <span class="hl-green" id="inc-wave">1</span></span>
+<span style="font-size:1rem; color:#94a3b8;">Threat Strike Power: <span class="hl-red" id="inc-monsterDmg">5</span> HP</span>
+</div>
+<!-- Dual System Realtime Monitoring Healthbars Layout -->
+<div class="health-row">
+<div class="hp-container">
+<div class="hp-label"><span>Player Wall Integrity</span><span><span id="inc-playerHp">200</span> / <span id="inc-playerMaxHp">200</span></span></div>
+<div style="background:#451a03; height:12px; border-radius:3px; overflow:hidden;">
+<div class="hp-bar-fill" id="inc-player-hp-bar" style="background:#22c55e;"></div>
+</div>
+</div>
+<div class="hp-container">
+<div class="hp-label"><span class="hl-red">Active Enemy Vital</span><span><span id="inc-hp">15</span> / <span id="inc-maxHp">15</span></span></div>
+<div style="background:#451a03; height:12px; border-radius:3px; overflow:hidden;">
+<div class="hp-bar-fill" id="inc-monster-hp-bar" style="background:#ef4444;"></div>
+</div>
+</div>
+</div>
+<!-- Visual Representation Tracking Runway -->
+<div class="battlefield-track">
+<div class="player-fortress">WALL</div>
+<div class="monster-avatar" id="inc-monster-token">👹</div>
+</div>
+<div class="game-grid">
+<!-- Economy Engine Panel Layout -->
+<div class="game-panel">
+<h3 class="hl-blue" style="margin: 5px 0;">Financial Mint</h3>
+<div class="game-stat">Credits: <span class="hl-blue" id="inc-credits">0</span></div>
+<button class="btn-game bg-mint" onclick="incManualMint()">Mint Currency (+<span id="inc-mintAmt">2</span>)</button>
+<div class="g-progress-bg">
+<div class="g-progress-bar" id="g-mint-bar"></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px;">
+<span style="font-size: 0.8rem; color: #94a3b8;">Auto Rate: <span id="inc-autoMintVal">0</span>/s</span>
+<button class="btn-mini-pause" id="pause-mint-btn" onclick="toggleMintPause()">⏸ Pause</button>
+</div>
+<button class="btn-game btn-g-up" id="inc-u-automint" onclick="incBuyAutoMint()">Hire Auto-Minter<br/>Cost: <span id="inc-c-automint">20</span> Cr</button>
+<button class="btn-game btn-g-up" id="inc-u-minttier" onclick="incUpgradeMintTier()">Upgrade Mint Tier (<span id="inc-mintTier">1</span>)<br/>Cost: <span id="inc-c-minttier">120</span> Cr</button>
+</div>
+<!-- Combat Engine Panel Layout -->
+<div class="game-panel">
+<h3 class="hl-red" style="margin: 5px 0;">Weapons Vector</h3>
+<div class="game-stat">Throw Damage: <span class="hl-red" id="inc-dmg">1</span></div>
+<button class="btn-game bg-attack" id="inc-btnAttack" onclick="incManualAttack()">Launch Projectile (Costs <span id="inc-ammoCost">5</span> Cr)</button>
+<div class="g-progress-bg">
+<div class="g-progress-bar" id="g-attack-bar"></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px;">
+<span style="font-size: 0.8rem; color: #94a3b8;">Auto Rate: <span id="inc-autoAtkVal">0</span>/s</span>
+<button class="btn-mini-pause" id="pause-attack-btn" onclick="toggleAttackPause()">⏸ Pause</button>
+</div>
+<button class="btn-game btn-g-up" id="inc-u-autoatk" onclick="incBuyAutoAttack()">Install Auto-Thrower<br/>Cost: <span id="inc-c-autoatk">35</span> Cr</button>
+<button class="btn-game btn-g-up" id="inc-u-atktier" onclick="incUpgradeAtkTier()">Upgrade Throw Tier (<span id="inc-atkTier">1</span>)<br/>Cost: <span id="inc-c-atktier">180</span> Cr</button>
+</div>
+<!-- Active Medical Repair Layout Component -->
+<div class="game-panel">
+<h3 class="hl-green" style="margin: 5px 0;">Wall Repair</h3>
+<div class="game-stat">Heal Power: <span class="hl-green" id="inc-healAmt">12</span></div>
+<button class="btn-game bg-heal" id="inc-btnHeal" onclick="incManualHeal()">Execute Structural Repair (Costs <span id="inc-healCost">12</span> Cr)</button>
+<div class="g-progress-bg">
+<div class="g-progress-bar" id="g-heal-bar"></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px;">
+<span style="font-size: 0.8rem; color: #94a3b8;">Auto Repair: <span id="inc-autoHealVal">0</span>/s</span>
+<button class="btn-mini-pause" id="pause-heal-btn" onclick="toggleHealPause()">⏸ Pause</button>
+</div>
+<button class="btn-game btn-g-up" id="inc-u-autoheal" onclick="incBuyAutoHeal()">Install Auto-Repairer<br/>Cost: <span id="inc-c-autoheal">40</span> Cr</button>
+<button class="btn-game btn-g-up" id="inc-u-healtier" onclick="incUpgradeHealTier()">Upgrade Repair Tier (<span id="inc-healTier">1</span>)<br/>Cost: <span id="inc-c-healtier">160</span> Cr</button>
+</div>
+</div>
+<!-- Fortification Utility Hub Grid Row -->
+<div class="utility-row">
+<button class="btn-game btn-g-up" id="inc-u-hpup" onclick="incUpgradeMaxHp()" style="flex: 1; padding:12px; background:#1e3a8a; color:white; border-color:#3b82f6; margin-top:0;">
+                        Reinforce Wall Max Health Structure (+35% Capacity)<br/>Cost: <span id="inc-c-hpup">50</span> Credits
+                    </button>
+</div>
+</div>
+
+        </div>
+    </div>
+
+    <script>
+let gameRunning = true;
+        let credits = 0;
+        let wave = 1;
+        let mintPaused = false;
+        let attackPaused = false;
+        let healPaused = false;
+        let maxHp = 15;
+        let currentHp = 15;
+        let monsterBaseDmg = 5;
+        let monsterCurrentDmg = 5;
+        let monsterDistance = 0; 
+        let playerMaxHp = 200;
+        let playerCurrentHp = 200;
+        let baseMintPower = 2;
+        let baseAttackPower = 1;
+        let attackAmmoCost = 5; 
+        let baseHealPower = 12;
+        let healCost = 12;
+        let autoMinters = 0;
+        let autoThrowers = 0;
+        let autoHealers = 0;
+        let mintTier = 1;
+        let attackTier = 1;
+        let healTier = 1;
+        let costAutoMint = 20;
+        let costMintTier = 120;
+        let costAutoAttack = 35;
+        let costAttackTier = 180;
+        let costAutoHeal = 40;
+        let costHealTier = 160;
+        let costHpUpgrade = 50;
+        let mintProgress = 0;
+        let attackProgress = 0;
+        let healProgress = 0;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('speedSlider');
+            const turboCheck = document.getElementById('turboCheck');
+            slider.addEventListener('input', (e) => {
+                document.documentElement.style.setProperty('--speed-mult', e.target.value);
+            });
+            turboCheck.addEventListener('change', (e) => {
+                const angle = e.target.checked ? '3600deg' : '360deg';
+                document.documentElement.style.setProperty('--spin-angle', angle);
+            });
+            
+            const modalWin = document.getElementById('gameModalWindow');
+            const closeBtn = document.getElementById('closeGameBtn');
+            const circularOpenBtn = document.getElementById('www');
+
+            // Opens game dashboard when the persistent circular button is clicked
+            circularOpenBtn.addEventListener('click', () => { 
+                modalWin.classList.add('active'); 
+                gameRunning = true; 
+            });
+
+            closeBtn.addEventListener('click', () => { 
+                modalWin.classList.remove('active'); 
+                gameRunning = false; 
+            });
+
+            const header = document.getElementById('gameWinHeader');
+            let isDragging = false;
+            let startX, startY, initialLeft, initialTop;
+            header.addEventListener('mousedown', (e) => {
+                if(e.target.classList.contains('close-btn')) return;
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                initialLeft = modalWin.offsetLeft;
+                initialTop = modalWin.offsetTop;
+                header.style.cursor = 'grabbing';
+            });
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+                modalWin.style.left = (initialLeft + dx) + 'px';
+                modalWin.style.top = (initialTop + dy) + 'px';
+            });
+            window.addEventListener('mouseup', () => {
+                if (isDragging) { isDragging = false; header.style.cursor = 'move'; }
+            });
+            setInterval(() => {
+                if (!gameRunning) return;
+                monsterDistance += (0.4 + (wave * 0.08));
+                if (monsterDistance >= 100) {
+                    monsterDistance = 0; 
+                    playerCurrentHp = Math.max(0, playerCurrentHp - monsterCurrentDmg);
+                    if (playerCurrentHp <= 0) {
+                        alert("Fortress Breached! Resetting...");
+                        wave = 1; credits = 0; playerMaxHp = 200; playerCurrentHp = playerMaxHp;
+                        maxHp = 15; currentHp = maxHp; monsterCurrentDmg = monsterBaseDmg;
+                        autoMinters = 0; autoThrowers = 0; autoHealers = 0;
+                        mintTier = 1; attackTier = 1; healTier = 1;
+                        baseMintPower = 2; baseAttackPower = 1; baseHealPower = 12; attackAmmoCost = 5; healCost = 12;
+                        costAutoMint = 20; costMintTier = 120; costAutoAttack = 35; costAttackTier = 180;
+                        costAutoHeal = 40; costHealTier = 160; costHpUpgrade = 50;
+                        mintPaused = false; attackPaused = false; healPaused = false;
+                    }
+                }
+                document.getElementById('inc-monster-token').style.right = `calc(${100 - monsterDistance}% - 45px)`;
+                if (autoMinters > 0 && !mintPaused) {
+                    mintProgress += (2 * mintTier);
+                    if (mintProgress >= 100) { credits += (autoMinters * baseMintPower); mintProgress = 0; }
+                    document.getElementById('g-mint-bar').style.width = mintProgress + '%';
+                }
+                if (autoThrowers > 0 && !attackPaused) {
+                    attackProgress += (1.5 * attackTier);
+                    if (attackProgress >= 100) {
+                        let totalCostPool = autoThrowers * attackAmmoCost;
+                        if (credits >= totalCostPool) { credits -= totalCostPool; incDealDamage(autoThrowers * baseAttackPower); }
+                        else if (credits >= attackAmmoCost) { let f = Math.floor(credits / attackAmmoCost); credits -= (f * attackAmmoCost); incDealDamage(f * baseAttackPower); }
+                        attackProgress = 0;
+                    }
+                    document.getElementById('g-attack-bar').style.width = attackProgress + '%';
+                }
+                if (autoHealers > 0 && playerCurrentHp < playerMaxHp && !healPaused) {
+                    healProgress += (1.5 * healTier);
+                    if (healProgress >= 100) {
+                        let totalHealCost = autoHealers * healCost;
+                        if (credits >= totalHealCost) { credits -= totalHealCost; incExecuteHeal(autoHealers * baseHealPower); }
+                        else if (credits >= healCost) { let f = Math.floor(credits / healCost); credits -= (f * healCost); incExecuteHeal(f * baseHealPower); }
+                        healProgress = 0;
+                    }
+                    document.getElementById('g-heal-bar').style.width = healProgress + '%';
+                }
+                updateIncUI();
+            }, 50);
+        });
+
+        function updateIncUI() {
+            document.getElementById('inc-credits').innerText = Math.floor(credits);
+            document.getElementById('inc-wave').innerText = wave;
+            document.getElementById('inc-hp').innerText = Math.ceil(currentHp);
+            document.getElementById('inc-maxHp').innerText = Math.ceil(maxHp);
+            document.getElementById('inc-playerHp').innerText = Math.ceil(playerCurrentHp);
+            document.getElementById('inc-playerMaxHp').innerText = Math.ceil(playerMaxHp);
+            document.getElementById('inc-monsterDmg').innerText = Math.ceil(monsterCurrentDmg);
+            document.getElementById('inc-mintAmt').innerText = baseMintPower;
+            document.getElementById('inc-dmg').innerText = baseAttackPower;
+            document.getElementById('inc-ammoCost').innerText = attackAmmoCost;
+            document.getElementById('inc-healAmt').innerText = baseHealPower;
+            document.getElementById('inc-healCost').innerText = healCost;
+            document.getElementById('inc-autoMintVal').innerText = mintPaused ? "Paused" : (autoMinters * baseMintPower * mintTier).toFixed(1);
+            document.getElementById('inc-autoAtkVal').innerText = attackPaused ? "Paused" : (autoThrowers * baseAttackPower * attackTier).toFixed(1);
+            document.getElementById('inc-autoHealVal').innerText = healPaused ? "Paused" : (autoHealers * baseHealPower * healTier).toFixed(1);
+            document.getElementById('inc-mintTier').innerText = mintTier;
+            document.getElementById('inc-atkTier').innerText = attackTier;
+            document.getElementById('inc-healTier').innerText = healTier;
+            document.getElementById('inc-c-automint').innerText = costAutoMint;
+            document.getElementById('inc-c-minttier').innerText = costMintTier;
+            document.getElementById('inc-c-autoatk').innerText = costAutoAttack;
+            document.getElementById('inc-c-atktier').innerText = costAttackTier;
+            document.getElementById('inc-c-autoheal').innerText = costAutoHeal;
+            document.getElementById('inc-c-healtier').innerText = costHealTier;
+            document.getElementById('inc-c-hpup').innerText = costHpUpgrade;
+            let monsterHpPct = Math.max(0, (currentHp / maxHp) * 100);
+            let playerHpPct = Math.max(0, (playerCurrentHp / playerMaxHp) * 100);
+            document.getElementById('inc-monster-hp-bar').style.width = monsterHpPct + '%';
+            document.getElementById('inc-player-hp-bar').style.width = playerHpPct + '%';
+            document.getElementById('inc-btnAttack').disabled = (credits < attackAmmoCost);
+            document.getElementById('inc-btnHeal').disabled = (credits < healCost || playerCurrentHp >= playerMaxHp);
+            document.getElementById('inc-u-automint').disabled = (credits < costAutoMint);
+            document.getElementById('inc-u-minttier').disabled = (credits < costMintTier);
+            document.getElementById('inc-u-autoatk').disabled = (credits < costAutoAttack);
+            document.getElementById('inc-u-atktier').disabled = (credits < costAttackTier);
+            document.getElementById('inc-u-autoheal').disabled = (credits < costAutoHeal);
+            document.getElementById('inc-u-healtier').disabled = (credits < costHealTier);
+            document.getElementById('inc-u-hpup').disabled = (credits < costHpUpgrade);
+            let mBtn = document.getElementById('pause-mint-btn');
+            mBtn.innerText = mintPaused ? "▶ Resume" : "⏸ Pause";
+            if(mintPaused) mBtn.classList.add('paused-state'); else mBtn.classList.remove('paused-state');
+            let aBtn = document.getElementById('pause-attack-btn');
+            aBtn.innerText = attackPaused ? "▶ Resume" : "⏸ Pause";
+            if(attackPaused) aBtn.classList.add('paused-state'); else aBtn.classList.remove('paused-state');
+            let hBtn = document.getElementById('pause-heal-btn');
+            hBtn.innerText = healPaused ? "▶ Resume" : "⏸ Pause";
+            if(healPaused) hBtn.classList.add('paused-state'); else hBtn.classList.remove('paused-state');
+        }
+
+        function incManualMint() { credits += baseMintPower; updateIncUI(); }
+        function incManualAttack() { if (credits >= attackAmmoCost) { credits -= attackAmmoCost; incDealDamage(baseAttackPower); } }
+        function incManualHeal() { if (credits >= healCost && playerCurrentHp < playerMaxHp) { credits -= healCost; incExecuteHeal(baseHealPower); } }
+        function incExecuteHeal(amount) { playerCurrentHp = Math.min(playerMaxHp, playerCurrentHp + amount); updateIncUI(); }
+        function incDealDamage(amt) {
+            currentHp -= amt;
+            if (currentHp <= 0) {
+                monsterDistance = 0;
+                credits += Math.floor(45 * Math.pow(1.15, wave));
+                wave++;
+                maxHp = Math.floor(15 * Math.pow(1.32, wave - 1));
+                monsterCurrentDmg = Math.floor(monsterBaseDmg * Math.pow(1.26, wave - 1));
+                currentHp = maxHp;
+            }
+            updateIncUI();
+        }
+        function toggleMintPause() { mintPaused = !mintPaused; updateIncUI(); }
+        function toggleAttackPause() { attackPaused = !attackPaused; updateIncUI(); }
+        function toggleHealPause() { healPaused = !healPaused; updateIncUI(); }
+        function incBuyAutoMint() { if (credits >= costAutoMint) { credits -= costAutoMint; autoMinters++; costAutoMint = Math.floor(costAutoMint * 1.4); updateIncUI(); } }
+        function incUpgradeMintTier() { if (credits >= costMintTier) { credits -= costMintTier; mintTier++; baseMintPower = Math.floor(baseMintPower * 1.5) + 2; costMintTier = Math.floor(costMintTier * 2.2); updateIncUI(); } }
+        function incBuyAutoAttack() { if (credits >= costAutoAttack) { credits -= costAutoAttack; autoThrowers++; costAutoAttack = Math.floor(costAutoAttack * 1.45); updateIncUI(); } }
+        function incUpgradeAtkTier() { if (credits >= costAttackTier) { credits -= costAttackTier; attackTier++; baseAttackPower = Math.floor(baseAttackPower * 1.6) + 1; attackAmmoCost = Math.floor(attackAmmoCost * 1.25) + 4; costAttackTier = Math.floor(costAttackTier * 2.3); updateIncUI(); } }
+        function incBuyAutoHeal() { if (credits >= costAutoHeal) { credits -= costAutoHeal; autoHealers++; costAutoHeal = Math.floor(costAutoHeal * 1.45); updateIncUI(); } }
+        function incUpgradeHealTier() { if (credits >= costHealTier) { credits -= costHealTier; healTier++; baseHealPower = Math.floor(baseHealPower * 1.5) + 4; healCost = Math.floor(healCost * 1.25) + 4; costHealTier = Math.floor(costHealTier * 2.2); updateIncUI(); } }
+        function incUpgradeMaxHp() { if (credits >= costHpUpgrade) { credits -= costHpUpgrade; playerMaxHp = Math.floor(playerMaxHp * 1.35) + 40; playerCurrentHp = playerMaxHp; costHpUpgrade = Math.floor(costHpUpgrade * 1.7); updateIncUI(); } }
+    
+    </script>
+</body>
+</html>

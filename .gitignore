@@ -1,0 +1,14 @@
+# Firebase cache & logs
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Build output
+dist/
+
+# OS and Editor files
+.DS_Store
+.vscode/
+.idea/
+Thumbs.db
