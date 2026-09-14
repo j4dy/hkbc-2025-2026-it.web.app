@@ -35,7 +35,7 @@ const EMBEDDED_PROJECTS = [
     "description": "An incremental wave defense game where players balance currency minting, projectile throw damage, and wall health repairs against escalating waves of monsters. Built with dynamic automation loops, tier upgrades, and persistent battle states.",
     "gameUrl": "/games/isaac-defense.html",
     "homageUrl": "https://duackyl.github.io/qwerty/",
-    "badge": "中五級作品 Y12 Work",
+    "badge": "12年級作品 Y12 Work",
     "tech": [
       "HTML5 Canvas",
       "Automation Loops",
@@ -54,7 +54,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A Roblox-styled baseball sports simulator featuring realistic ball trajectory physics, pitch variety, batting timing feedback, and custom stadium HUD designed for high-energy arcade gameplay.",
     "gameUrl": "https://jackiu17.github.io/jackieee/jackie_useful/game.html",
     "homageUrl": "https://jackiu17.github.io/jackieee/jackie_useful/jackie.html",
-    "badge": "中五級作品 Y12 Work",
+    "badge": "12年級作品 Y12 Work",
     "tech": [
       "Sports Physics",
       "Roblox UI Design",
@@ -73,7 +73,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A high-velocity cyber terminal styled with neon glowing borders and interactive system diagnostic feeds. Acts as Hinson's command center launching game experiences.",
     "gameUrl": "https://hinson1017.github.io/MyHomePage/GameTerminal.html",
     "homageUrl": "https://hinson1017.github.io/MyHomePage/",
-    "badge": "中五級作品 Y12 Work",
+    "badge": "12年級作品 Y12 Work",
     "tech": [
       "Terminal Emulation",
       "CSS Glow Effects",
@@ -92,7 +92,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A top-down shooter built on HTML5 Canvas featuring vibrant neon particle trails, fluid 360-degree aiming, enemy AI tracking, and adrenaline-pumping survival waves.",
     "gameUrl": "https://mkysugna.github.io/angus_personal_home_page/game.html",
     "homageUrl": "https://mkysugna.github.io/angus_personal_home_page/",
-    "badge": "中五級作品 Y12 Work",
+    "badge": "12年級作品 Y12 Work",
     "tech": [
       "HTML5 Canvas",
       "Vector Math",
@@ -111,7 +111,7 @@ const EMBEDDED_PROJECTS = [
     "description": "An interactive 8-bit retro web game crafted with Tailwind CSS and classic arcade fonts. Players explore rooms, search for hidden items, and avoid seekers within an immersive pixel-art interface.",
     "gameUrl": "https://bobo2111.github.io/Bobo/hideandseekgame.html",
     "homageUrl": "https://bobo2111.github.io/Bobo/",
-    "badge": "中五級作品 Y12 Work",
+    "badge": "12年級作品 Y12 Work",
     "tech": [
       "Tailwind CSS",
       "Retro 8-Bit Typography",
@@ -130,7 +130,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A 3D First-Person Shooter experience running entirely in browser canvas without heavy game engines. Features pointer lock controls, target tracking, weapon animations, and responsive movement.",
     "gameUrl": "https://rene0510.github.io/rene_new_personal_page/webapp.html",
     "homageUrl": "https://rene0510.github.io/rene_new_personal_page/",
-    "badge": "中五級作品 Y12 Work",
+    "badge": "12年級作品 Y12 Work",
     "tech": [
       "3D Canvas Rendering",
       "Raycasting",
@@ -149,7 +149,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A 3D first-person perspective adaptation of the arcade classic Pac-Man. Navigate winding corridors, collect power pellets, and evade dynamic ghost AI in a raycasted 3D canvas environment.",
     "gameUrl": "https://sedgwickhung0728-dot.github.io/Pac-Man/",
     "homageUrl": "https://bi.robi3.com/sedgwick-hung/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "3D Canvas",
       "Raycasting",
@@ -168,7 +168,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A responsive 3D driving arcade game featuring oncoming vehicle hazards, road perspective scaling, score multipliers, and dynamic road curvature.",
     "gameUrl": "https://danielkiukiu322-art.github.io/test-game/",
     "homageUrl": "https://bi.robi3.com/daniel-l/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "3D Canvas",
       "Collision Physics",
@@ -187,7 +187,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Action-packed arcade reflex game where players navigate neon defense bars, deflect projectiles, and rack up high combos under escalating speeds.",
     "gameUrl": "https://vvin830.github.io/Brickbreaker/",
     "homageUrl": "https://bi.robi3.com/charlie-chan/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "HTML5 Canvas",
       "Reflex Mechanics",
@@ -206,7 +206,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A cheerful, fast-action infinite runner where players leap over ground hazards and flying obstacles with responsive jump physics and multiplier rewards.",
     "gameUrl": "https://bignuts676767-commits.github.io/hi/",
     "homageUrl": "https://bi.robi3.com/vanessa/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Side-Scrolling Engine",
       "Jump Physics",
@@ -225,7 +225,7 @@ const EMBEDDED_PROJECTS = [
     "description": "An in-browser 3D voxel sandbox inspired by Minecraft, featuring real-time voxel generation, block building and destruction mechanics, and first-person camera movement.",
     "gameUrl": "https://tp211162-art.github.io/Minecraft/",
     "homageUrl": "https://bi.robi3.com/jabbok/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "3D Voxel Engine",
       "Terrain Generation",
@@ -244,7 +244,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A sleek neon reaction test game challenging players to tap targets while dodging pulsing hazards under a tight countdown clock.",
     "gameUrl": "https://tp211142-hub.github.io/doggame/",
     "homageUrl": "https://bi.robi3.com/elita/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "DOM Animations",
       "Timing Loops",
@@ -263,7 +263,7 @@ const EMBEDDED_PROJECTS = [
     "description": "An intense 2D arcade starship flight game with glowing vector graphics, asteroid collision detection, progressive speed scaling, and space flight controls.",
     "gameUrl": "https://tp211168-jpg.github.io/cat-game/",
     "homageUrl": "https://bi.robi3.com/cherry/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "HTML5 Canvas 2D",
       "Starfield Particle Engine",
@@ -282,7 +282,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Guide a hungry panda across lush forest clearings to gather fresh bamboo shoots while dodging falling obstacles and earning special power snacks.",
     "gameUrl": "https://tp211140-creator.github.io/panadagame/",
     "homageUrl": "https://bi.robi3.com/cara-term3-mid-term/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "HTML5 Canvas",
       "Sprite Animation",
@@ -301,7 +301,7 @@ const EMBEDDED_PROJECTS = [
     "description": "An elaborate dual-character combat RPG experience featuring light magic casting, cooldown skill rotations, particle visual effects, and intense boss battles.",
     "gameUrl": "https://huangjingtao109-design.github.io/Abc/",
     "homageUrl": "https://bi.robi3.com/pictre/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Combat State Machine",
       "Particle FX Engine",
@@ -320,7 +320,7 @@ const EMBEDDED_PROJECTS = [
     "description": "An elegant, distraction-free implementation of the classic Tetris tetromino falling puzzle with ghost pieces, hard drops, and smooth line-clear scoring.",
     "gameUrl": "https://wbk1145-lgtm.github.io/Y11A-KevinW/",
     "homageUrl": "https://bi.robi3.com/y11a-kevin-wang/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Matrix Grid Logic",
       "Tetromino Rotation Math",
@@ -339,7 +339,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A sports typing hybrid where landing three-pointers requires rapid and accurate keypad entry of 6 and 7-digit strings against a shot clock.",
     "gameUrl": "https://jac0b1111.github.io/basketball/",
     "homageUrl": "https://bi.robi3.com/jacob-2/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Typing Event Listeners",
       "Shot Clock Timer",
@@ -358,7 +358,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A heartwarming virtual dog companion game where players feed, play fetch, groom, and maintain health meters for Jeffery the virtual puppy.",
     "gameUrl": "https://danielkiukiu322-art.github.io/jeffery/",
     "homageUrl": "https://bi.robi3.com/jeffery/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Pet State Simulator",
       "Need Meters (Hunger/Happiness)",
@@ -377,7 +377,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Curated portfolio website by Lateisha Leung exploring digital layout compositions, visual styling, and interactive web elements created in HKBC Year 11.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/kkk/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Visual Web Design",
       "Divi Builder",
@@ -396,7 +396,7 @@ const EMBEDDED_PROJECTS = [
     "description": "A personal homepage crafted by Phoebe featuring creative storytelling, reflections on literature, artwork showcases, and modern web styling.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/phoebe/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Creative Writing",
       "Responsive CSS",
@@ -415,7 +415,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Interactive digital hub designed by Regan highlighting creative frontend design, modular layout architecture, and personal identity.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/regan-2/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Web Layouts",
       "CSS Styling",
@@ -434,7 +434,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Vibrant student homepage by Eunes showcasing music passions, favorite musical groups, and expressive web storytelling crafted during Year 11 ICT.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/eunes/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Music Media",
       "HTML & CSS",
@@ -453,7 +453,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Personal portfolio by Hyman Poon presenting his dedication to competitive fencing, athletic aspirations, and modern web design techniques.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/hyman-2/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Athletic Portfolio",
       "Web Publishing",
@@ -472,7 +472,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Modern web studio page created by Shelly Lin showcasing digital storytelling, clean typographic layout, and personalized visual flair.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/shelly/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Web Typography",
       "Visual Showcase",
@@ -491,7 +491,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Personal homepage created by Shereen for Year 11 ICT, demonstrating intuitive web navigation, responsive containers, and creative expression.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/shereen/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Frontend UI",
       "Responsive Layout",
@@ -510,7 +510,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Web computing showcase created by William, presenting technological interests, computing concepts, and personalized digital identity.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/william/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Web Architecture",
       "Computing Topics",
@@ -529,7 +529,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Creative web project created by Vio exploring personal expression, color palettes, and structured web layouts in Year 11 ICT.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/vio-4/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Visual Layouts",
       "Color Systems",
@@ -548,7 +548,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Student project created by Bright for the Year 11 ICT curriculum, exploring frontend web layouts and generative AI development.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/y11/y11-authors/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Web Fundamentals",
       "Creative Computing",
@@ -567,7 +567,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Personal digital showcase developed by Daniel Wong within the HKBC Year 11 ICT curriculum, focusing on interactive design and modern web technology.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/y11/y11-authors/",
-    "badge": "中四級作品 Y11 Work",
+    "badge": "11年級作品 Y11 Work",
     "tech": [
       "Interactive Design",
       "HTML5 & CSS3",
@@ -586,7 +586,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Interactive personal web page designed by Billy in Year 10 ICT, showcasing student interests, web design fundamentals, and creative multimedia layouts.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/s1mon/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Web Architecture",
       "HTML & CSS",
@@ -605,7 +605,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Playful and imaginative digital space crafted by Bird for the Year 10 ICT curriculum, showcasing custom layout styling and multimedia integration.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/weqweqwewqweqewqeqweqweqweqweqw-edfsdfq%e5%8d%83%e4%b8%87%e5%af%8c%e7%bf%81%e5%be%88%e5%a4%9a%e5%8f%91%e9%a1%ba%e4%b8%b0%e5%a6%82%e6%9e%9c%e4%bb%96%e5%8f%916b-d-jjkasdujhfuguytfgsuohtguihtgawenuotaui/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Web Publishing",
       "Visual Layouts",
@@ -624,7 +624,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Vibrant student homepage by Coco presenting personal hobbies, creative storytelling, and responsive web aesthetics created during Year 10 computing.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/my-hobby/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Blog Architecture",
       "CSS Styling",
@@ -643,7 +643,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Clean personal homepage created by Frank showcasing introductory web development topics, layout composition, and interactive elements.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/frank-website/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Frontend Design",
       "Responsive Layout",
@@ -662,7 +662,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Expressive digital homepage created by Janice featuring personalized aesthetic touches, modular design blocks, and student project highlights.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/janice/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Visual Storytelling",
       "CSS Grid",
@@ -681,7 +681,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Structured student homepage designed by Jennifer, featuring multimedia galleries, clean component styling, and personalized self-introduction.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/jennifer/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Web Composition",
       "Responsive Containers",
@@ -700,7 +700,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Personal web space designed by Year 10 student Judy, exploring creative web layout fundamentals, typography, and personalized digital content.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/judy/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Creative Computing",
       "CSS Formatting",
@@ -719,7 +719,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Enthusiastic and colorful web showcase created by Kathy for Year 10 ICT, incorporating interactive sections and creative digital design.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/kathy/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Visual Web Design",
       "Typography",
@@ -738,7 +738,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Delightful student homepage created by Kaylin featuring video clips, favorite anime/cartoons (Gravity Falls), figurines, CodeMonkey coding reflections, and multilingual greetings.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/kaylin/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Video Embeds",
       "Multilingual UI",
@@ -757,7 +757,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Modern personal profile designed by Nikki for the HKBC Year 10 computing curriculum, showcasing structured web sections and personal interests.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/nikki/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Structured Layout",
       "Responsive CSS",
@@ -776,7 +776,7 @@ const EMBEDDED_PROJECTS = [
     "description": "Dynamic personal web portal created by Yang, highlighting computing curiosities, clean frontend layout techniques, and digital storytelling.",
     "gameUrl": null,
     "homageUrl": "https://bi.robi3.com/657/",
-    "badge": "中三級作品 Y10 Work",
+    "badge": "10年級作品 Y10 Work",
     "tech": [
       "Web Engineering",
       "Modern CSS",
@@ -908,7 +908,7 @@ function createCardHTML(p) {
     `;
   }
 
-  const displayYear = p.year === 'Year 12' ? '中五級 Year 12' : (p.year === 'Year 11' ? '中四級 Year 11' : '中三級 Year 10');
+  const displayYear = p.year === 'Year 12' ? '12年級 Year 12' : (p.year === 'Year 11' ? '11年級 Year 11' : '10年級 Year 10');
   const displayCat = p.category === 'Games' ? '🎮 互動遊戲 Games' : '🌐 個人主頁 Homage';
 
   return `
@@ -961,7 +961,7 @@ function createCardHTML(p) {
 }
 
 function openModal(p) {
-  const displayYear = p.year === 'Year 12' ? '中五級 Year 12' : (p.year === 'Year 11' ? '中四級 Year 11' : '中三級 Year 10');
+  const displayYear = p.year === 'Year 12' ? '12年級 Year 12' : (p.year === 'Year 11' ? '11年級 Year 11' : '10年級 Year 10');
   const yearClass = p.year === 'Year 12' ? 'badge-y12' : (p.year === 'Year 11' ? 'badge-y11' : 'badge-y10');
 
   modalYear.textContent = displayYear;

@@ -123,11 +123,11 @@
 </head>
 <body>
   <div class="card">
-    <div class="badge" id="p-year">中四級 Year 11 • ICT Vibe Coding</div>
+    <div class="badge" id="p-year">11年級 Year 11 • ICT Vibe Coding</div>
     <h1 id="p-title">學生作品展示 Student Project Showcase</h1>
     <div class="author" id="p-author">香港紫荊書院 Hong Kong Bluebell College</div>
     <p class="desc" id="p-desc">
-      此作品為香港紫荊書院中四級（Year 11）同學於 2025–2026 學年度由 Miss Judy 指導之 Vibe Coding 課程創作項目。
+      此作品為香港紫荊書院 11年級（Year 11）同學於 2025–2026 學年度由 Miss Judy 指導之 Vibe Coding 課程創作項目。
     </p>
     <div class="tech-box">
       <h3>🛠️ 應用技術與方法 Skills & Technologies</h3>
@@ -152,7 +152,7 @@
 
     if (student) {
       document.title = `${student} - ${title || '學生作品'} | HKBC`;
-      document.getElementById('p-author').textContent = `創作者 Author: ${student}（${year === 'Year 12' ? '中五級 Year 12' : '中四級 Year 11'}）`;
+      document.getElementById('p-author').textContent = `創作者 Author: ${student}（${year === 'Year 12' ? '12年級 Year 12' : (year === 'Year 11' ? '11年級 Year 11' : '10年級 Year 10')}）`;
     }
     if (title) document.getElementById('p-title').textContent = title;
     if (desc) document.getElementById('p-desc').textContent = desc;
