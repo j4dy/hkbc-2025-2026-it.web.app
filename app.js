@@ -374,6 +374,24 @@ const EMBEDDED_PROJECTS = [
     "vibePrompt": "Build a Tamagotchi-style virtual puppy companion web app with hunger and happiness status bars, feeding, fetching, and cute dog reactions."
   },
   {
+    "id": "y11-hyman",
+    "year": "Year 11",
+    "student": "Hyman",
+    "title": "En Garde! Hyman vs Jeep Wong",
+    "category": "Games",
+    "description": "以擊劍西洋劍（Foil）規則為基礎設計的雙人擊劍對決遊戲！模擬有效得分軀幹判定與進攻優先權（Right of Way），考驗步法前進、後退、弓步進攻與格擋技巧。A tactical fencing duel simulator built on foil rules, featuring priority/right-of-way mechanics, torso hitboxes, advance/retreat footwork, and parry lunges.",
+    "gameUrl": "https://j4dy.github.io/hyman-game/",
+    "homageUrl": "https://bi.robi3.com/hyman-2/",
+    "badge": "11年級作品 Y11 Work",
+    "tech": [
+      "HTML5 Canvas 2D",
+      "Fencing Foil Priority Engine",
+      "Hitbox Collision",
+      "2-Player Keyboard Duel"
+    ],
+    "vibePrompt": "Create a 2-player Olympic foil fencing duel game with Right of Way priority rules, advance, retreat, lunge, and parry actions on a regulation strip piste."
+  },
+  {
     "id": "y11-lateisha",
     "year": "Year 11",
     "student": "Lateisha",
@@ -444,24 +462,6 @@ const EMBEDDED_PROJECTS = [
       "Interactive UI"
     ],
     "vibePrompt": "Create an energetic personal portal dedicated to music, favorite bands, and creative digital identity."
-  },
-  {
-    "id": "y11-hyman",
-    "year": "Year 11",
-    "student": "Hyman",
-    "title": "Hyman 個人主頁 (Hyman's Website)",
-    "category": "Personal Homepage",
-    "description": "Personal portfolio by Hyman Poon presenting his dedication to competitive fencing, athletic aspirations, and modern web design techniques.",
-    "gameUrl": null,
-    "homageUrl": "https://bi.robi3.com/hyman-2/",
-    "badge": "11年級作品 Y11 Work",
-    "tech": [
-      "Athletic Portfolio",
-      "Web Publishing",
-      "CSS Modules",
-      "Multimedia"
-    ],
-    "vibePrompt": "Build an inspiring athlete portfolio showcasing fencing training, competition milestones, and personal goals."
   },
   {
     "id": "y11-shelly",
