@@ -1,24 +1,5 @@
 [
   {
-    "id": "y12-isaac",
-    "year": "Year 12",
-    "student": "Isaac",
-    "title": "Incremental Defense",
-    "category": "Games",
-    "description": "An incremental wave defense game where players balance currency minting, projectile throw damage, and wall health repairs against escalating waves of monsters. Built with dynamic automation loops, tier upgrades, and persistent battle states.",
-    "gameUrl": "./games/isaac-defense.html",
-    "homageUrl": "https://duackyl.github.io/qwerty/",
-    "badge": "12年級推薦作品 Y12 Recommended",
-    "tech": [
-      "HTML5 Canvas",
-      "Automation Loops",
-      "Incremental Economy",
-      "CSS Architecture"
-    ],
-    "vibePrompt": "Create an incremental tower defense simulation where I can mint credits, purchase automated throwers and auto-repairers, upgrade my wall health, and fend off scaling monster waves with real-time health bars.",
-    "recommended": true
-  },
-  {
     "id": "y12-jackie",
     "year": "Year 12",
     "student": "Jackie",
@@ -111,6 +92,25 @@
       "First-Person Physics"
     ],
     "vibePrompt": "Generate a lightweight browser 3D first-person shooter canvas game with target shooting, pointer lock mouse look, and HUD health/ammo counters.",
+    "recommended": true
+  },
+  {
+    "id": "y12-isaac",
+    "year": "Year 12",
+    "student": "Isaac",
+    "title": "Incremental Defense",
+    "category": "Games",
+    "description": "An incremental wave defense game where players balance currency minting, projectile throw damage, and wall health repairs against escalating waves of monsters. Built with dynamic automation loops, tier upgrades, and persistent battle states.",
+    "gameUrl": "./games/isaac-defense.html",
+    "homageUrl": "https://duackyl.github.io/qwerty/",
+    "badge": "12年級推薦作品 Y12 Recommended",
+    "tech": [
+      "HTML5 Canvas",
+      "Automation Loops",
+      "Incremental Economy",
+      "CSS Architecture"
+    ],
+    "vibePrompt": "Create an incremental tower defense simulation where I can mint credits, purchase automated throwers and auto-repairers, upgrade my wall health, and fend off scaling monster waves with real-time health bars.",
     "recommended": true
   },
   {
