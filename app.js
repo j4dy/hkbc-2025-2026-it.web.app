@@ -776,7 +776,7 @@ const EMBEDDED_PROJECTS = [
 
 async function init() {
   try {
-    const res = await fetch('./src/data/projects.json');
+    const res = await fetch('./src/data/projects.json?t=' + Date.now());
     if (res.ok) {
       allProjects = await res.json();
     } else {
